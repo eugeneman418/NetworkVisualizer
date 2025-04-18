@@ -1,4 +1,4 @@
-package org.example.routing;
+package org.networkvisualizer.topology.routing;
 
 import com.graphhopper.reader.ReaderWay;
 import com.graphhopper.routing.util.EncodingManager;

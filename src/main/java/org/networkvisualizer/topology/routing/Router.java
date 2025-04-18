@@ -1,4 +1,4 @@
-package org.example.routing;
+package org.networkvisualizer.topology.routing;
 
 import com.graphhopper.GHRequest;
 import com.graphhopper.GHResponse;
@@ -29,7 +29,7 @@ public class Router {
         gh.importOrLoad();
     }
 
-    public ResponsePath routeCar(double fromLat, double fromLon, double toLat, double toLon) {
+    public ResponsePath routeTruck(double fromLat, double fromLon, double toLat, double toLon) {
         return routeHelper(fromLat, fromLon, toLat, toLon, "car");
     }
     public ResponsePath routeTrain(double fromLat, double fromLon, double toLat, double toLon) {

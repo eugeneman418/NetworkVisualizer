@@ -1,4 +1,4 @@
-package org.example;
+package org.networkvisualizer.topology;
 
 import com.graphhopper.util.PointList;
 import com.graphhopper.util.shapes.GHPoint;

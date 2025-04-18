@@ -1,10 +1,8 @@
-package org.example.routing;
+package org.networkvisualizer.topology.routing;
 
 import com.graphhopper.reader.ReaderWay;
-import com.graphhopper.routing.ev.DecimalEncodedValueImpl;
 import com.graphhopper.routing.util.EncodingManager;
 import com.graphhopper.routing.util.RoadsFlagEncoder;
-import com.graphhopper.storage.IntsRef;
 import com.graphhopper.util.PMap;
 
 import static com.graphhopper.routing.util.EncodingManager.getKey;

@@ -1,4 +1,4 @@
-package org.example.routing;
+package org.networkvisualizer.topology.routing;
 
 import com.graphhopper.routing.util.CarFlagEncoder;
 import com.graphhopper.routing.util.FlagEncoder;
@@ -6,6 +6,7 @@ import com.graphhopper.routing.util.FlagEncoderFactory;
 import com.graphhopper.util.PMap;
 
 public class CustomFlagEncoderFactory implements FlagEncoderFactory {
+
     static final String TRAIN = "train";
     static final String BARGE = "barge";
 

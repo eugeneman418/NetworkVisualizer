@@ -1,0 +1,15 @@
+{
+    "nodes": [
+      { "name": "Delft", "lon": 4.3556, "lat": 52.0116 },
+      { "name": "The Hague", "lon": 4.3007, "lat": 52.0705 },
+      { "name": "Rotterdam", "lon": 4.4625, "lat": 51.9265 },
+      { "name": "Amsterdam", "lon": 4.8971, "lat": 52.3779 }
+    ],
+    "edges": [
+      { "from": "Delft", "to": "The Hague", "mode": "train" },
+      { "from": "Delft", "to": "Rotterdam", "mode": "barge" },
+      { "from": "Rotterdam", "to": "Amsterdam", "mode": "truck" },
+      { "from": "The Hague", "to": "Amsterdam", "mode": "train" }
+    ]
+  }
+  

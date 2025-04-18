@@ -3,12 +3,11 @@ package org.example.routing;
 import com.graphhopper.reader.ReaderWay;
 import com.graphhopper.routing.util.EncodingManager;
 import com.graphhopper.routing.util.RoadsFlagEncoder;
-import com.graphhopper.storage.IntsRef;
 import com.graphhopper.util.PMap;
 
-public class ShipFlagEncoder extends RoadsFlagEncoder {
+public class BargeFlagEncoder extends RoadsFlagEncoder {
 
-    public ShipFlagEncoder(PMap properties) {
+    public BargeFlagEncoder(PMap properties) {
         super();
     }
 
@@ -24,7 +23,7 @@ public class ShipFlagEncoder extends RoadsFlagEncoder {
 
     @Override
     public String getName() {
-        return "ship";
+        return "barge";
     }
 
 }

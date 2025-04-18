@@ -20,10 +20,10 @@ public class Router {
         gh.setProfiles(
                 new Profile("car").setVehicle("car").setWeighting("fastest").setTurnCosts(false),
                 new Profile("train").setVehicle("train").setWeighting("shortest").setTurnCosts(false),
-                new Profile("ship").setVehicle("ship").setWeighting("fastest").setTurnCosts(false)
+                new Profile("barge").setVehicle("barge").setWeighting("fastest").setTurnCosts(false)
         );
 
-        gh.getCHPreparationHandler().setCHProfiles(new CHProfile("car"), new CHProfile("train"),new CHProfile("ship"));
+        gh.getCHPreparationHandler().setCHProfiles(new CHProfile("car"), new CHProfile("train"),new CHProfile("barge"));
 
         // now this can take minutes if it imports or a few seconds for loading of course this is dependent on the area you import
         gh.importOrLoad();
@@ -35,8 +35,8 @@ public class Router {
     public ResponsePath routeTrain(double fromLat, double fromLon, double toLat, double toLon) {
         return routeHelper(fromLat, fromLon, toLat, toLon, "train");
     }
-    public ResponsePath routeShip(double fromLat, double fromLon, double toLat, double toLon) {
-        return routeHelper(fromLat, fromLon, toLat, toLon, "ship");
+    public ResponsePath routeBarge(double fromLat, double fromLon, double toLat, double toLon) {
+        return routeHelper(fromLat, fromLon, toLat, toLon, "barge");
     }
     private ResponsePath routeHelper(double fromLat, double fromLon, double toLat, double toLon, String mode) {
         GHRequest request = new GHRequest(fromLat, fromLon, toLat, toLon).setProfile(mode);

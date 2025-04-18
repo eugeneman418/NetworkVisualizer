@@ -7,7 +7,7 @@ import com.graphhopper.util.PMap;
 
 public class CustomFlagEncoderFactory implements FlagEncoderFactory {
     static final String TRAIN = "train";
-    static final String SHIP = "ship";
+    static final String BARGE = "barge";
 
     @Override
     public FlagEncoder createFlagEncoder(String name, PMap configuration) {
@@ -15,8 +15,8 @@ public class CustomFlagEncoderFactory implements FlagEncoderFactory {
             return new CarFlagEncoder(configuration);
         if (name.equals(TRAIN))
             return new TrainFlagEncoder(configuration);
-        if (name.equals(SHIP))
-            return new ShipFlagEncoder(configuration);
+        if (name.equals(BARGE))
+            return new BargeFlagEncoder(configuration);
         throw new IllegalArgumentException("entry in encoder list not supported: " + name);
 
     }

@@ -1,4 +1,4 @@
-package org.networkvisualizer.topology;
+package org.networkvisualizer;
 
 import com.graphhopper.util.PointList;
 import com.graphhopper.util.shapes.GHPoint;
@@ -13,9 +13,6 @@ public class Simplifier {
     }
 
     public static List<Point> simplifyPolyline(List<Point> points, Map<Point, Boolean> fixedMap) {
-        System.out.print("input size: ");
-        System.out.println(points.size());
-
         if (points == null || points.size() < 3) return points;
 
         List<Point> result = new ArrayList<>();
@@ -33,8 +30,6 @@ public class Simplifier {
             }
         }
 
-        System.out.print("output size: ");
-        System.out.println(result.size());
         return result;
     }
 

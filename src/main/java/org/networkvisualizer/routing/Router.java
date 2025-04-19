@@ -1,4 +1,4 @@
-package org.networkvisualizer.topology.routing;
+package org.networkvisualizer.routing;
 
 import com.graphhopper.GHRequest;
 import com.graphhopper.GHResponse;

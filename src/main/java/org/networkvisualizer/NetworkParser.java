@@ -1,4 +1,4 @@
-package org.networkvisualizer.topology;
+package org.networkvisualizer;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
@@ -13,12 +13,10 @@ public class NetworkParser {
     public static Network parseJson(String filePath) throws Exception {
         JSONObject root = new JSONObject(new JSONTokener(new FileReader(filePath)));
 
-        // Valid transport modes
-        Set<String> validModes = Set.of("truck", "train", "barge");
 
         // Parse nodes
         JSONArray nodeArray = root.getJSONArray("nodes");
-        Map<String, Network.Node> nodeMap = new HashMap<>();
+        Map<String, Network.Node> nodeMap = new LinkedHashMap<>();
 
         for (int i = 0; i < nodeArray.length(); i++) {
             JSONObject nodeObj = nodeArray.getJSONObject(i);
@@ -44,11 +42,18 @@ public class NetworkParser {
             if (!nodeMap.containsKey(to)) {
                 throw new IllegalArgumentException("Unknown 'to' node: " + to);
             }
-            if (!validModes.contains(mode)) {
+            if (!Network.validMode(mode)) {
                 throw new IllegalArgumentException("Invalid mode: " + mode);
             }
 
-            edges.add(new Network.Edge(from, to, mode));
+            Network.Edge edge = new Network.Edge(from, to, mode);
+            if (edges.contains(edge)) {
+                // there cannot be 2 edges of the same origin & destination & mode since the path will be identical
+                throw new IllegalArgumentException("Duplicate Edge: " + edge);
+            }
+            else {
+                edges.add(edge);
+            }
         }
 
         return new Network(nodeMap, edges);

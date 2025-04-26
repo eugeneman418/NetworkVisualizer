@@ -1,4 +1,4 @@
-package org.networkvisualizer;
+package org.networkvisualizer.network;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
@@ -16,14 +16,14 @@ public class NetworkParser {
 
         // Parse nodes
         JSONArray nodeArray = root.getJSONArray("nodes");
-        Map<String, Network.Node> nodeMap = new LinkedHashMap<>();
+        Map<String, Network.Vertex> nodeMap = new LinkedHashMap<>();
 
         for (int i = 0; i < nodeArray.length(); i++) {
             JSONObject nodeObj = nodeArray.getJSONObject(i);
             String name = nodeObj.getString("name");
             double lon = nodeObj.getDouble("lon");
             double lat = nodeObj.getDouble("lat");
-            nodeMap.put(name, new Network.Node(name, lon, lat));
+            nodeMap.put(name, new Network.Vertex(name, lon, lat));
         }
 
         // Parse edges
@@ -42,7 +42,7 @@ public class NetworkParser {
             if (!nodeMap.containsKey(to)) {
                 throw new IllegalArgumentException("Unknown 'to' node: " + to);
             }
-            if (!Network.validMode(mode)) {
+            if (!Network.isValidMode(mode)) {
                 throw new IllegalArgumentException("Invalid mode: " + mode);
             }
 

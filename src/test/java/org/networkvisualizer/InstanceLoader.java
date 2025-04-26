@@ -1,5 +1,8 @@
 package org.networkvisualizer;
 
+import org.networkvisualizer.network.Network;
+import org.networkvisualizer.network.NetworkParser;
+import org.networkvisualizer.network.Timeline;
 import org.networkvisualizer.routing.Router;
 
 public class InstanceLoader {

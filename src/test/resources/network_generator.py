@@ -7,21 +7,21 @@ output_path = sys.argv[2] if len(sys.argv) > 2 else "network.json"
 
 modes = ["truck", "train", "barge"]
 
-network = {'nodes': [], 'edges': []}
+network = {'vertices': [], 'edges': []}
 
 with open(node_path, 'r') as node_file:
     csv_reader = csv.reader(node_file)
     header = next(csv_reader)
     for row in csv_reader:
-        node = {
+        vertex = {
             'name': row[0],
             'lon': row[1],
             'lat': row[2],	
         }
-        network['nodes'].append(node)
+        network['vertices'].append(vertex)
     
-    for node1 in network['nodes']:
-        for node2 in network['nodes']:
+    for node1 in network['vertices']:
+        for node2 in network['vertices']:
             if node1['name'] == node2['name']:
                 continue
             for mode in modes:

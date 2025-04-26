@@ -1,4 +1,4 @@
-package org.networkvisualizer;
+package org.networkvisualizer.network;
 
 import com.graphhopper.util.PointList;
 import com.graphhopper.util.shapes.GHPoint;
@@ -22,7 +22,7 @@ public class Simplifier {
             if (segment.size() < 3) {
                 result.addAll(segment);
             }
-            else if (fixedMap.getOrDefault(segment.getFirst(), false)) {
+            else if (fixedMap.getOrDefault(segment.get(0), false)) {
                 result.addAll(segment);
             }
             else {
@@ -43,7 +43,7 @@ public class Simplifier {
         if (points == null || points.isEmpty()) return segments;
 
         List<Point> currentSegment = new ArrayList<>();
-        Boolean currentFlag = fixedMap.getOrDefault(points.getFirst(), false);
+        Boolean currentFlag = fixedMap.getOrDefault(points.get(0), false);
 
         for (Point p : points) {
             Boolean flag = fixedMap.getOrDefault(p, false);
@@ -69,9 +69,11 @@ public class Simplifier {
         MatOfPoint2f inputCurve = new MatOfPoint2f();
         inputCurve.fromList(segment);
         MatOfPoint2f outputCurve = new MatOfPoint2f();
-        double epsilon = 0.1*Imgproc.arcLength(inputCurve,false); // distance between old and new paths is at most 1% path length
+        double epsilon = 100*Imgproc.arcLength(inputCurve,false); // distance between old and new paths is at most 50% path length
         Imgproc.approxPolyDP(inputCurve, outputCurve, epsilon, false);
 
+//        System.out.println("Input segment length: " + segment.size());
+//        System.out.println("Output segment length: " + outputCurve.toList().size());
         return new ArrayList<>(outputCurve.toList());
     }
 
@@ -92,6 +94,13 @@ public class Simplifier {
         }
 
 
-        return routes.stream().map(r -> simplifyPolyline(r, fixedMap)).toList();
+        var simplifiedRoutes = routes.stream().map(r -> simplifyPolyline(r, fixedMap)).toList();
+//        System.out.println("Num points on input routes: " + String.valueOf(routes.stream().mapToInt(List::size).sum()));
+//        System.out.println("Num points on output routes: " + String.valueOf(simplifiedRoutes.stream().mapToInt(List::size).sum()));
+        return simplifiedRoutes;
     }
+
+
+
+
 }

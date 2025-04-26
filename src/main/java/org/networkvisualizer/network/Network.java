@@ -1,4 +1,4 @@
-package org.networkvisualizer;
+package org.networkvisualizer.network;
 
 import com.graphhopper.ResponsePath;
 import com.graphhopper.util.PointList;
@@ -9,37 +9,42 @@ import java.util.*;
 
 
 public class Network {
-
     public static final String TRUCK = "truck";
     public static final String TRAIN = "train";
     public static final String BARGE = "barge";
 
-    public Map<String, Node> nodes;
+    public static final Set<String> validModes = Set.of(TRUCK, TRAIN, BARGE);
+
+
+
+    public Map<String, Vertex> nodes;
     public List<Edge> edges;
 
     private List<Route> routes;
+    public IntersectionGraph intersectionGraph;
 
-    public Network(List<Node> nodes, List<Edge> edges) {
+    public Network(List<Vertex> vertices, List<Edge> edges) {
         this.edges = edges;
         this.nodes = new HashMap<>();
-        for (var node : nodes) {
+        for (var node : vertices) {
             this.nodes.put(node.name, node);
         }
     }
 
-    public Network(Map<String, Node> nodes, List<Edge> edges) {
+    public Network(Map<String, Vertex> nodes, List<Edge> edges) {
         this.nodes = nodes;
         this.edges = edges;
     }
 
-    public static boolean validMode(String mode) {
-        return Set.of(TRUCK, TRAIN, BARGE).contains(mode);
+    public static boolean isValidMode(String mode) {
+        return validModes.contains(mode);
     }
 
     public List<Route> getRoutes() throws Exception {
         if (routes == null) throw new Exception("routes not initialized, call calculateRoutes first");
         else return routes;
     }
+
 
     /**
      * Compute list of simplified routes corresponding to the edge list
@@ -48,14 +53,14 @@ public class Network {
         List<Double> distances = new ArrayList<>(edges.size());
         List<PointList> ghRoutes = new ArrayList<>(edges.size());
         for (var edge: edges) {
-            Network.Node from = nodes.get(edge.from());
-            Network.Node to = nodes.get(edge.to());
+            Vertex from = nodes.get(edge.from());
+            Vertex to = nodes.get(edge.to());
             ResponsePath route = switch (edge.mode()) {
                 case Network.TRUCK -> router.routeTruck(from.lat(), from.lon(), to.lat(), to.lon());
                 case Network.TRAIN -> router.routeTrain(from.lat(), from.lon(), to.lat(), to.lon());
                 case Network.BARGE -> router.routeBarge(from.lat(), from.lon(), to.lat(), to.lon());
                 default -> {
-                    if (Network.validMode(edge.mode())) {
+                    if (Network.isValidMode(edge.mode())) {
                         throw new Exception("router not implemented for mode: " + edge.mode());
                     }
                     else
@@ -68,6 +73,8 @@ public class Network {
 
         List<List<Point>> simplifiedRoutes = Simplifier.simplifyNetwork(ghRoutes);
         assert edges.size() == distances.size() && edges.size() == simplifiedRoutes.size(): "Excepts one route per edge";
+        intersectionGraph = IntersectionGraph.fromGhRoutes(ghRoutes);
+
 
         routes = new ArrayList<>();
         for (int i = 0 ; i < edges.size(); i++) {
@@ -91,7 +98,7 @@ public class Network {
         return str.toString();
     }
 
-    public record Node(String name, double lon, double lat) {
+    public record Vertex(String name, double lon, double lat) {
 
         public String toString() {
             return name + " (" + lon + ", " + lat + ")";

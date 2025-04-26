@@ -1,4 +1,4 @@
-package org.networkvisualizer;
+package org.networkvisualizer.network;
 
 import com.opencsv.CSVWriter;
 import org.networkvisualizer.routing.Router;

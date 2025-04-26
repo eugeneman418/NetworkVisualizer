@@ -1,9 +1,7 @@
-package org.networkvisualizer;
+package org.networkvisualizer.network;
 
 import com.opencsv.CSVReader;
-import org.apache.commons.collections.OrderedBidiMap;
 import org.opencv.core.Point;
-import org.opencv.dnn.Net;
 
 import java.io.FileReader;
 import java.util.*;
@@ -12,13 +10,11 @@ import java.util.stream.IntStream;
 
 public class Timeline {
 
-    private TreeMap<Double, Set<Event>> events = new TreeMap<>(); // use tree map so events are ordered by time
-    private Network network;
+    private final TreeMap<Double, Set<Event>> events = new TreeMap<>(); // use tree map so events are ordered by time
 
-    private Map<Link, Set<Network.Edge>> links = new HashMap<>(); // acceleration structure to store the edges passing though each link
+    private final Network network;
 
     public Timeline(Network network, Collection<Event> events) throws Exception {
-        this.network = network;
         if (!new HashSet<>(network.edges).containsAll(events.stream().map(event -> event.edge).collect(Collectors.toSet()))) {
             throw new IllegalArgumentException("Timeline contains events on non-existing edges");
         }
@@ -28,18 +24,7 @@ public class Timeline {
             this.events.computeIfAbsent(event.time, t -> new HashSet<>()).add(event);
         }
 
-        List<Network.Route> routes = network.getRoutes();
-        for (int i = 0; i < network.edges.size(); i++) {
-            Network.Edge edge = network.edges.get(i);
-            List<Point> route = routes.get(i).path();
-            for (int j = 1; j < route.size(); j++) {
-                Point start = route.get(j-1);
-                Point end = route.get(j);
-                Link link = new Link(start, end);
-                // add edge to set (create set first if link is new)
-                links.computeIfAbsent(link, l -> new HashSet<>()).add(edge);
-            }
-        }
+        this.network = network;
 
 
     }
@@ -76,11 +61,24 @@ public class Timeline {
         return getEvents(time).stream().filter(event -> event.edge.mode().equals(mode)).collect(Collectors.toSet());
     }
 
-    public Set<Event> getEvents(double time, Link link) {
+    public Set<Event> getEvents(double time, List<Point> path) {
         // for each edge that passes over link, get all of its events, then aggregate
-        return links.get(link).stream().map(edge -> getEvents(time, edge))
+        return network.intersectionGraph.paths.get(path).stream().map(edgeIdx -> getEvents(time, network.edges.get(edgeIdx)))
                 .flatMap(Set::stream).collect(Collectors.toSet());
     }
+
+    public Set<Event> getEvents(double time, List<Point> path, String mode) {
+        // for each edge that passes over link, get all of its events, then aggregate
+        return getEvents(time, path).stream()
+                .filter(event -> event.edge.mode().equals(mode)).collect(Collectors.toSet());
+    }
+
+    public Set<Event> getEvents(double time, List<Point> path, Set<String> modes) {
+        // for each edge that passes over link, get all of its events, then aggregate
+        return getEvents(time, path).stream()
+                .filter(event -> modes.contains(event.edge.mode())).collect(Collectors.toSet());
+    }
+
 
 
     public static Timeline initializeFromCsv(String csvPath, Network network, boolean hasHeader) throws Exception {
@@ -109,6 +107,8 @@ public class Timeline {
 
 
 
+
+
     /**
      * A timeline is a sequence of events.
      * Each event is defined by when it occurs and where (the edge) it occurs.
@@ -119,9 +119,8 @@ public class Timeline {
     }
 
     /**
-     * A link is a pair of consecutive points on a route. In other words, a route is a sequence of links
+     * A link is a pair of consecutive points on a route. In other words, a route is a sequence of paths
      */
     public record Link(Point start, Point end) {
-
     }
 }

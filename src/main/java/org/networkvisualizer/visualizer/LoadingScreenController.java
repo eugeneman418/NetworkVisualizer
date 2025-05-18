@@ -14,6 +14,7 @@ import org.networkvisualizer.network.Network;
 import org.networkvisualizer.network.NetworkParser;
 import org.networkvisualizer.network.Timeline;
 import org.networkvisualizer.routing.Router;
+import org.networkvisualizer.server.VisualizationServer;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -23,6 +24,7 @@ import java.util.List;
 public class LoadingScreenController {
 
     private File osm, network, events; // File is just an abstraction over path, it contains no data
+    private boolean serverStarted = false;
 
     @FXML private Button selectMapButton;
     @FXML private Text mapLabel;
@@ -36,7 +38,6 @@ public class LoadingScreenController {
     @FXML private Button startSimulationButton;
 
     @FXML private Button exportDistMatrixButton;
-
 
 
     @FXML
@@ -78,30 +79,37 @@ public class LoadingScreenController {
     // Called when "Start Simulation" button is clicked
     @FXML
     private void startSimulation(ActionEvent event) {
+        if (serverStarted) {
+            System.out.println("Server is already running.");
+            return;
+        }
+
+
+        startSimulationButton.setDisable(true); // optionally disable the button
+
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/javafx/visualization.fxml"));
-            Parent root = loader.load();
+            if (!serverStarted) {
+                VisualizationServer server = new VisualizationServer(
+                        osm.getAbsolutePath(),
+                        network.getAbsolutePath(),
+                        events.getAbsolutePath()
+                );
+                startSimulationButton.setText("Go to localhost:"+server.port);
+                serverStarted = true;
+            }
 
-            Router router = new Router(this.osm.getPath());
-            Network net = NetworkParser.parseJson(this.network.getPath());
-            net.calculateRoutes(router);
-            Timeline timeline = Timeline.initializeFromCsv(events.getPath(), net, true);
-
-
-            VisualizationController controller = loader.getController();
-            controller.init(net, timeline); // load network and timeline then pass it to controller
-
-            // Get the stage from the current button
-            Stage stage = (Stage) startSimulationButton.getScene().getWindow();
-
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
         } catch (Exception e) {
             e.printStackTrace();
-            System.err.println("Failed to start visualization");
+            serverStarted = false; // reset if server fails to start
+            // Optionally re-enable the button if desired
+
+            startSimulationButton.setDisable(false);
+            startSimulationButton.setText("Start Visualization");
+
+
         }
     }
+
 
 
     @FXML
@@ -133,7 +141,7 @@ public class LoadingScreenController {
                 net.calculateRoutes(router);
                 for (int i = 0; i < net.edges.size(); i++) {
                     Network.Edge edge = net.edges.get(i);
-                    double dist = net.getRoutes().get(i).distance();
+                    double dist = net.distances.get(i);
                     writer.writeNext(new String[]{edge.from(), edge.to(), edge.mode(), String.valueOf(dist)});
                 }
             } catch (Exception e) {

@@ -21,7 +21,7 @@ public class DistanceMatrixCalculator {
             network.calculateRoutes(router);
             for (int i = 0; i < network.edges.size(); i++) {
                 Network.Edge edge = network.edges.get(i);
-                double dist = network.getRoutes().get(i).distance();
+                double dist = network.distances.get(i);
                 writer.writeNext(new String[]{edge.from(), edge.to(), edge.mode(), String.valueOf(dist)});
             }
         }

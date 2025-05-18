@@ -14,6 +14,8 @@ public class Timeline {
 
     private final Network network;
 
+    public Map<String, Integer> maxIntensityByMode;
+
     public Timeline(Network network, Collection<Event> events) throws Exception {
         if (!new HashSet<>(network.edges).containsAll(events.stream().map(event -> event.edge).collect(Collectors.toSet()))) {
             throw new IllegalArgumentException("Timeline contains events on non-existing edges");
@@ -26,7 +28,7 @@ public class Timeline {
 
         this.network = network;
 
-
+        calculateMaxIntensityByMode();
     }
 
     public double endTime() {
@@ -63,7 +65,8 @@ public class Timeline {
 
     public Set<Event> getEvents(double time, List<Point> path) {
         // for each edge that passes over link, get all of its events, then aggregate
-        return network.intersectionGraph.paths.get(path).stream().map(edgeIdx -> getEvents(time, network.edges.get(edgeIdx)))
+
+        return network.intersectionGraph.pathToEdges.get(path).stream().map(edgeIdx -> getEvents(time, network.edges.get(edgeIdx)))
                 .flatMap(Set::stream).collect(Collectors.toSet());
     }
 
@@ -119,8 +122,32 @@ public class Timeline {
     }
 
     /**
-     * A link is a pair of consecutive points on a route. In other words, a route is a sequence of paths
+     * A link is a pair of consecutive points on a route. In other words, a route is a sequence of pathToEdges
      */
     public record Link(Point start, Point end) {
     }
+
+    private void calculateMaxIntensityByMode() {
+        if (maxIntensityByMode == null) {
+            maxIntensityByMode = new HashMap<>();
+        }
+        else {
+            maxIntensityByMode.clear();
+        }
+
+
+        for (double time : getTimesteps()) { // across all time steps
+
+            for (List<Point> path : network.intersectionGraph.paths) { // on each path
+                for (String mode : Network.validModes) { // for every vehicle type
+                    int intensity = getEvents(time, path, mode).stream()
+                            .mapToInt(Timeline.Event::quantity).sum();
+                    if (!maxIntensityByMode.containsKey(mode) || maxIntensityByMode.get(mode) < intensity) {
+                        maxIntensityByMode.put(mode, intensity);
+                    }
+                }
+            }
+        }
+    }
+
 }

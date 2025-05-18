@@ -6,10 +6,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
+import org.networkvisualizer.server.VisualizationServer;
 
 import java.io.IOException;
 
 public class LoadingScreen extends Application {
+
+
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -23,7 +26,8 @@ public class LoadingScreen extends Application {
         stage.show();
     }
     public static void main(String[] args) throws IOException {
-        ;launch();
+        launch();
+
 //        Router router = new Router("resources/test/zh.osm.pbf");
 //        Network network = NetworkParser.parseJson("resources/test/network.json");
 //        network.calculateRoutes(router);

@@ -17,7 +17,7 @@
       </Text>
       <Text fx:id="networkLabel" layoutX="320.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="no network selected" wrappingWidth="129.579345703125" />
       <Text fx:id="eventsLabel" layoutX="320.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="no events selected" wrappingWidth="129.579345703125" />
-      <Button fx:id="startSimulationButton" layoutX="108.0" layoutY="222.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#startSimulation" text="Start Simulation" />
+      <Button fx:id="startSimulationButton" layoutX="108.0" layoutY="222.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#startSimulation" text="Start Visualization" />
       <Button fx:id="exportDistMatrixButton" layoutX="108.0" layoutY="259.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#exportMatrix" text="Export OD Matrix" />
       <Button fx:id="selectMapButton" layoutX="106.0" layoutY="116.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#selectMap" text="Choose Map" />
       <Text fx:id="mapLabel" layoutX="320.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="no map selected" wrappingWidth="129.579345703125" />

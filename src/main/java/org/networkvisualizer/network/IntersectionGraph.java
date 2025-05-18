@@ -11,10 +11,14 @@ import java.util.stream.Collectors;
 
 
 public class IntersectionGraph {
+    static {
+        nu.pattern.OpenCV.loadLocally() ;
+    }
     public Set<Point> nodes = new HashSet<>(); // nodes are either endpoints or branching points
-    // can't be a set here because in each path corresponds to a track on the visualizer, and they are related by index
-    // map containing links on intersection graph, and all the routes they belong to (route index = edge index)
-    public Map<List<Point>, Set<Integer>> paths = new HashMap<>();
+
+    public Map<List<Point>, Set<Integer>> pathToEdges = new HashMap<>();
+
+    public List<List<Point>> paths = new ArrayList<>(); // use this list for a fix order of iteration (since hashset doesn't have a fixed order of iteration through its keys)
 
 
     /**
@@ -48,17 +52,17 @@ public class IntersectionGraph {
         }
 
 
-        // now compute the paths
+        // now compute the pathToEdges
         for (int n = 0 ; n < routes.size(); n++) {
             List<Point> route = routes.get(n);
             if (route.isEmpty()) continue;
             List<Point> currentPath = new ArrayList<>();
-            currentPath.add(route.get(0));
+            currentPath.add(route.get(0)); // add starting point
             for (int i = 1; i < route.size(); i++) {
                 Point nextPoint = route.get(i);
-                currentPath.add(nextPoint);
-                if (nodes.contains(nextPoint)) { // intersection found, end of path
-                    paths.computeIfAbsent(currentPath, k -> new TreeSet<>()).add(n); // add path to paths, and save the route number it belongs to
+                currentPath.add(nextPoint); // expand current path by 1 point
+                if (nodes.contains(nextPoint)) { // next point is intersection -> end of path
+                    pathToEdges.computeIfAbsent(currentPath, k -> new TreeSet<>()).add(n); // add path to pathToEdges, and save the route number it belongs to
                     currentPath = new ArrayList<>(); //start new path
                     currentPath.add(nextPoint); // start & end points of a path are always nodes
                 }
@@ -69,6 +73,10 @@ public class IntersectionGraph {
         if (simplificationFactor > 0) {
             simplifyPaths(simplificationFactor);
         }
+
+        for (List<Point> path : pathToEdges.keySet()) {
+            paths.add(path);
+        }
     }
 
     public IntersectionGraph(final List<List<Point>> routes) {
@@ -77,10 +85,10 @@ public class IntersectionGraph {
 
     public void simplifyPaths(double simplificationFactor) {
         Map<List<Point>, Set<Integer>> simplifiedPaths = new HashMap<>();
-        for (var entry : paths.entrySet()) {
+        for (var entry : pathToEdges.entrySet()) {
             simplifiedPaths.put(simplifyPath(entry.getKey(), simplificationFactor), entry.getValue());
         }
-        paths = simplifiedPaths;
+        pathToEdges = simplifiedPaths;
     }
 
     private static List<Point> simplifyPath(List<Point> path, double simplificationFactor) {
@@ -90,8 +98,8 @@ public class IntersectionGraph {
         double epsilon = simplificationFactor * Imgproc.arcLength(inputCurve,false);
         Imgproc.approxPolyDP(inputCurve, outputCurve, epsilon, false);
 
-        System.out.println("Input segment length: " + path.size());
-        System.out.println("Output segment length: " + outputCurve.toList().size());
+//        System.out.println("Input segment length: " + path.size());
+//        System.out.println("Output segment length: " + outputCurve.toList().size());
         return new ArrayList<>(outputCurve.toList());
     }
 

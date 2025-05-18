@@ -69,7 +69,7 @@ public class Simplifier {
         MatOfPoint2f inputCurve = new MatOfPoint2f();
         inputCurve.fromList(segment);
         MatOfPoint2f outputCurve = new MatOfPoint2f();
-        double epsilon = 100*Imgproc.arcLength(inputCurve,false); // distance between old and new paths is at most 50% path length
+        double epsilon = 100*Imgproc.arcLength(inputCurve,false); // distance between old and new pathToEdges is at most 50% path length
         Imgproc.approxPolyDP(inputCurve, outputCurve, epsilon, false);
 
 //        System.out.println("Input segment length: " + segment.size());

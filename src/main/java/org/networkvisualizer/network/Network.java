@@ -18,9 +18,12 @@ public class Network {
 
 
     public Map<String, Vertex> nodes;
-    public List<Edge> edges;
 
-    private List<Route> routes;
+    public List<Edge> edges;
+    // list of routes matching the list of edges
+
+    public List<Double> distances;
+
     public IntersectionGraph intersectionGraph;
 
     public Network(List<Vertex> vertices, List<Edge> edges) {
@@ -40,17 +43,14 @@ public class Network {
         return validModes.contains(mode);
     }
 
-    public List<Route> getRoutes() throws Exception {
-        if (routes == null) throw new Exception("routes not initialized, call calculateRoutes first");
-        else return routes;
-    }
+
 
 
     /**
      * Compute list of simplified routes corresponding to the edge list
      */
-    public List<Route> calculateRoutes(Router router) throws Exception {
-        List<Double> distances = new ArrayList<>(edges.size());
+    public void calculateRoutes(Router router) throws Exception {
+        distances = new ArrayList<>(edges.size());
         List<PointList> ghRoutes = new ArrayList<>(edges.size());
         for (var edge: edges) {
             Vertex from = nodes.get(edge.from());
@@ -71,16 +71,11 @@ public class Network {
             ghRoutes.add(route.getPoints());
         }
 
-        List<List<Point>> simplifiedRoutes = Simplifier.simplifyNetwork(ghRoutes);
-        assert edges.size() == distances.size() && edges.size() == simplifiedRoutes.size(): "Excepts one route per edge";
+
         intersectionGraph = IntersectionGraph.fromGhRoutes(ghRoutes);
 
 
-        routes = new ArrayList<>();
-        for (int i = 0 ; i < edges.size(); i++) {
-            routes.add(new Route(simplifiedRoutes.get(i), distances.get(i)));
-        }
-        return routes;
+
     }
 
     public String toString() {
@@ -111,9 +106,6 @@ public class Network {
         }
     }
 
-    public record Route(List<Point> path, double distance) {
-
-    }
 
 
 

@@ -94,7 +94,7 @@ public class LoadingScreenController {
                         network.getAbsolutePath(),
                         events.getAbsolutePath()
                 );
-                startSimulationButton.setText("Go to localhost:"+server.port);
+                startSimulationButton.setText("Server started at localhost:"+server.port);
                 serverStarted = true;
             }
 

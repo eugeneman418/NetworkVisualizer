@@ -5,8 +5,10 @@ import org.networkvisualizer.network.Network;
 import org.networkvisualizer.network.NetworkParser;
 import org.networkvisualizer.network.Timeline;
 import org.networkvisualizer.routing.Router;
+import org.opencv.core.Point;
 
 import java.net.InetSocketAddress;
+import java.util.List;
 
 public class VisualizationServer {
 
@@ -26,11 +28,22 @@ public class VisualizationServer {
         this.port = port;
 
         server = HttpServer.create(new InetSocketAddress(port), 0);
-        server.createContext("/graph", new GraphHandler(network.intersectionGraph));
+        server.createContext("/graph", new GraphHandler(network));
         server.createContext("/metadata", new MetadataHandler(timeline));
         server.createContext("/intensity", new IntensityHandler(network, timeline));
         server.createContext("/link", new LinkHandler(network, timeline));
+        server.createContext("/node", new NodeHandler(network, timeline));
 
+        for (int i = 0; i < network.intersectionGraph.paths.size(); i++) {
+            List<Point> path = network.intersectionGraph.paths.get(i);
+            System.out.print(i + ": ");
+            for (int edgeIdx : network.intersectionGraph.pathToEdges.get(path)) {
+                Network.Edge edge = network.edges.get(edgeIdx);
+                System.out.print(edge.toString() +", ");
+            }
+            System.out.println("");
+
+        }
 
         server.start();
         System.out.println("Server started at http://localhost:"+port+"/");

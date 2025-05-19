@@ -42,6 +42,8 @@ public class Timeline {
         return timesteps;
     }
 
+
+
     /**
      * get all events at a time step
      */
@@ -76,9 +78,20 @@ public class Timeline {
                 .filter(event -> event.edge.mode().equals(mode)).collect(Collectors.toSet());
     }
 
-    public Set<Event> getEvents(double time, List<Point> path, Set<String> modes) {
+    public Set<Event>  getEvents(double time, List<Point> path, Set<String> modes) {
         // for each edge that passes over link, get all of its events, then aggregate
         return getEvents(time, path).stream()
+                .filter(event -> modes.contains(event.edge.mode())).collect(Collectors.toSet());
+    }
+
+    public Set<Event> getEvents(double time, Network.Vertex vertex) {
+        return getEvents(time).stream().filter(event ->
+                event.edge.from().equals(vertex.name()) || event.edge.to().equals(vertex.name())) // incident edges
+                .collect(Collectors.toSet());
+    }
+
+    public Set<Event> getEvents(double time, Network.Vertex vertex, Set<String> modes) {
+        return getEvents(time, vertex).stream()
                 .filter(event -> modes.contains(event.edge.mode())).collect(Collectors.toSet());
     }
 

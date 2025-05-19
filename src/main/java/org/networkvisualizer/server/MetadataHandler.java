@@ -26,6 +26,7 @@ public class MetadataHandler implements HttpHandler {
     @Override
     public void handle(HttpExchange exchange) throws IOException {
         String response = encodeMetadata();
+        exchange.getResponseHeaders().add("Access-Control-Allow-Origin", "*");
         exchange.getResponseHeaders().set("Content-Type", "application/json");
         respond(exchange, 200, response);
     }

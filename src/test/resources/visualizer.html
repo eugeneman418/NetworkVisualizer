@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network Visualizer</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    #map {
+      width: 70%;
+      height: 100%;
+      float: left;
+    }
+    #controls {
+      width: 30%;
+      height: 100%;
+      float: left;
+      padding: 10px;
+      background-color: #f4f4f4;
+    }
+    #color-bar {
+      width: 30px;
+      height: 100px;
+      background: linear-gradient(to top, #ff0000, #00ff00);
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    #time-slider {
+      width: 100%;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="map"></div>
+
+  <div id="controls">
+    <div id="color-bar"></div>
+    <h4>Vehicles</h4>
+    <label><input type="checkbox" id="showTruckBox" checked> Truck</label><br>
+    <label><input type="checkbox" id="showTrainBox" checked> Train</label><br>
+    <label><input type="checkbox" id="showBargeBox" checked> Barge</label><br>
+
+    <h4>Data Table</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Origin</th>
+          <th>Destination</th>
+          <th>Category</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody id="data-table">
+        <!-- Data rows will go here -->
+      </tbody>
+    </table>
+
+    <h4>Time</h4>
+    <input type="range" id="time-slider" min="0" max="100" step="1" value="0">
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script>
+    // Initialize the map
+    var map = L.map('map').setView([51.505, -0.09], 13); // Default position and zoom level
+
+    // Add tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Sample data for table and map (Origin, Destination, Category, Quantity)
+    var data = [
+      { origin: "A", dest: "B", category: "Truck", quantity: 10, lat: 51.505, lon: -0.09 },
+      { origin: "B", dest: "C", category: "Train", quantity: 5, lat: 51.515, lon: -0.1 },
+      { origin: "C", dest: "D", category: "Barge", quantity: 20, lat: 51.525, lon: -0.11 },
+    ];
+
+    // Function to update the table with data
+    function updateTable() {
+      const tableBody = document.getElementById('data-table');
+      tableBody.innerHTML = ''; // Clear previous rows
+      data.forEach(item => {
+        var row = document.createElement('tr');
+        row.innerHTML = `<td>${item.origin}</td><td>${item.dest}</td><td>${item.category}</td><td>${item.quantity}</td>`;
+        tableBody.appendChild(row);
+      });
+    }
+
+    // Function to update the map with markers
+    function updateMap() {
+      map.eachLayer(function (layer) {
+        if (layer instanceof L.Marker) {
+          map.removeLayer(layer);
+        }
+      });
+
+      // Add markers based on selected checkboxes
+      data.forEach(item => {
+        if ((item.category === "Truck" && document.getElementById("showTruckBox").checked) ||
+            (item.category === "Train" && document.getElementById("showTrainBox").checked) ||
+            (item.category === "Barge" && document.getElementById("showBargeBox").checked)) {
+          L.marker([item.lat, item.lon])
+            .addTo(map)
+            .bindPopup(`${item.category}: ${item.origin} to ${item.dest}`);
+        }
+      });
+    }
+
+    // Event listeners for checkboxes to update the map and table
+    document.getElementById("showTruckBox").addEventListener("change", function () {
+      updateMap();
+    });
+    document.getElementById("showTrainBox").addEventListener("change", function () {
+      updateMap();
+    });
+    document.getElementById("showBargeBox").addEventListener("change", function () {
+      updateMap();
+    });
+
+    // Event listener for time slider (to simulate time changes)
+    document.getElementById("time-slider").addEventListener("input", function (e) {
+      console.log("Time: " + e.target.value);
+    });
+
+    // Initialize the map and table on page load
+    updateMap();
+    updateTable();
+  </script>
+
+</body>
+</html>

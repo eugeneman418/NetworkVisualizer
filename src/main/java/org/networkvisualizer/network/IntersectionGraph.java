@@ -30,6 +30,7 @@ public class IntersectionGraph {
      */
     public IntersectionGraph(final List<List<Point>> routes, final double simplificationFactor) {
         List<Set<Point>> setRoutes = routes.stream().map(r -> new HashSet<>(r)).collect(Collectors.toList()); //set representation for faster query
+        // first compute the nodes
         for (int i = 0; i < routes.size(); i++) {
             List<Point> thisRoute = routes.get(i);
             if (thisRoute.isEmpty()) continue;
@@ -80,7 +81,7 @@ public class IntersectionGraph {
     }
 
     public IntersectionGraph(final List<List<Point>> routes) {
-        this(routes, 0.05); // default 5% tolerance
+        this(routes, 0.001); // default 5% tolerance
     }
 
     public void simplifyPaths(double simplificationFactor) {

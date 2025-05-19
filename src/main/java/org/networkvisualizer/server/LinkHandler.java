@@ -31,6 +31,7 @@ public class LinkHandler implements HttpHandler {
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
+        exchange.getResponseHeaders().add("Access-Control-Allow-Origin", "*");
         exchange.getResponseHeaders().set("Content-Type", "application/json");
 
         try {
@@ -52,13 +53,18 @@ public class LinkHandler implements HttpHandler {
             }
 
             // Parse and validate time
-            double time;
+            int timeIdx;
             try {
-                time = Double.parseDouble(queryParams.get("time").get(0));
+                timeIdx = Integer.parseInt(queryParams.get("time").get(0));
             } catch (NumberFormatException e) {
                 throw new IllegalArgumentException("Invalid value for time: must be a number");
             }
-
+            double time;
+            try {
+                time = timeline.getTimesteps().get(timeIdx);
+            } catch (Exception e) {
+                throw new IllegalArgumentException("Invalid index for time: " + timeIdx);
+            }
 
             // Parse and validate modes
             Set<String> modes = new HashSet<>();

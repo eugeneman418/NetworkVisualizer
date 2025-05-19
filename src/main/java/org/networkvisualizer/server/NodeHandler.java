@@ -2,34 +2,27 @@ package org.networkvisualizer.server;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import org.networkvisualizer.network.Network;
 import org.networkvisualizer.network.Timeline;
 import org.opencv.core.Point;
-import org.opencv.dnn.Net;
 
 import java.io.IOException;
-import java.io.OutputStream;
-import java.net.URI;
-import java.net.URLDecoder;
-import java.nio.charset.StandardCharsets;
-import java.sql.Time;
-import java.util.*;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import static org.networkvisualizer.server.HandlerUtil.parseQueryParams;
 import static org.networkvisualizer.server.HandlerUtil.respond;
 
-/**
- * responds with the intensity on all links, requires time and modes in url param
- * time=0&modes=TRUCK,BARGE
- * note time here is an index and not the actual time
- */
-public class IntensityHandler implements HttpHandler {
+public class NodeHandler implements HttpHandler {
     private final Network network;
     private final Timeline timeline;
 
-    public IntensityHandler(Network network, Timeline timeline) {
+    public NodeHandler(Network network, Timeline timeline) {
         this.network = network;
         this.timeline = timeline;
     }
@@ -53,18 +46,17 @@ public class IntensityHandler implements HttpHandler {
                 throw new IllegalArgumentException("Missing required parameter: modes");
             }
 
-            // Parse and validate time
-            int timeIdx;
-            try {
-                timeIdx = Integer.parseInt(queryParams.get("time").get(0));
-            } catch (NumberFormatException e) {
-                throw new IllegalArgumentException("Invalid value for time: must be a number");
+            // Check that "path" is provided
+            if (!queryParams.containsKey("node")) {
+                throw new IllegalArgumentException("Missing required parameter: path");
             }
+
+            // Parse and validate time
             double time;
             try {
-                time = timeline.getTimesteps().get(timeIdx);
-            } catch (Exception e) {
-                throw new IllegalArgumentException("Invalid index for time: " + timeIdx);
+                time = Double.parseDouble(queryParams.get("time").get(0));
+            } catch (NumberFormatException e) {
+                throw new IllegalArgumentException("Invalid value for time: must be a number");
             }
 
 
@@ -78,13 +70,14 @@ public class IntensityHandler implements HttpHandler {
                 modes.add(mode);
             }
 
-            // Normal response
-            String response = encodeIntensities(time, modes);
-            respond(exchange, 200, response);
+            String nodeName = queryParams.get("node").get(0);
+            if (!network.nodes.containsKey(nodeName))
+                throw new IllegalArgumentException("Invalid node: " + nodeName);
 
+            String response = encodeEvents(time, network.nodes.get(nodeName), modes);
+            respond(exchange, 200, response);
         } catch (IllegalArgumentException e) {
             // Bad Request: 400
-            e.printStackTrace();
             String errorMessage = "{\"error\": \"" + e.getMessage() + "\"}";
             respond(exchange, 400, errorMessage);
 
@@ -97,16 +90,26 @@ public class IntensityHandler implements HttpHandler {
     }
 
     /**
-     * encodes intensity on each path as json
+     * [
+     *  {"from": String,
+     *  "to": String,
+     *  "category": String,
+     *  "quantity": int
+     *  },
+     *  ...]
      */
-    private String encodeIntensities(double time, Set<String> modes) {
-        //System.out.println(String.join(",", modes));
+    private String encodeEvents(double time, Network.Vertex node, Set<String> modes) {
+        Set<Timeline.Event> events =  timeline.getEvents(time, node, modes);
         ObjectMapper mapper = new ObjectMapper();
-        ArrayNode intensities = mapper.createArrayNode();
-        for (List<Point> path: network.intersectionGraph.paths) {
-            int intensity = timeline.getEvents(time, path, modes).stream().mapToInt(Timeline.Event::quantity).sum();
-            intensities.add(intensity);
+        ArrayNode jsonEvents = mapper.createArrayNode();
+        for (Timeline.Event event : events){
+            ObjectNode jsonEvent = mapper.createObjectNode();
+            jsonEvent.put("from", event.edge().from());
+            jsonEvent.put("to", event.edge().to());
+            jsonEvent.put("category", event.category());
+            jsonEvent.put("quantity", event.quantity());
+            jsonEvents.add(jsonEvent);
         }
-        return intensities.toString();
+        return jsonEvents.toString();
     }
 }

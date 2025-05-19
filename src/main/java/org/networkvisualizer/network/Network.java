@@ -52,9 +52,11 @@ public class Network {
     public void calculateRoutes(Router router) throws Exception {
         distances = new ArrayList<>(edges.size());
         List<PointList> ghRoutes = new ArrayList<>(edges.size());
+
         for (var edge: edges) {
             Vertex from = nodes.get(edge.from());
             Vertex to = nodes.get(edge.to());
+
             ResponsePath route = switch (edge.mode()) {
                 case Network.TRUCK -> router.routeTruck(from.lat(), from.lon(), to.lat(), to.lon());
                 case Network.TRAIN -> router.routeTrain(from.lat(), from.lon(), to.lat(), to.lon());
@@ -69,6 +71,7 @@ public class Network {
             };
             distances.add(route.getDistance() / 1000); // OSM distance is in meters by default for some reason
             ghRoutes.add(route.getPoints());
+
         }
 
 

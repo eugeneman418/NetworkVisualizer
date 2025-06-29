@@ -2,7 +2,7 @@ package org.networkvisualizer.example;
 
 import org.networkvisualizer.server.VisualizationServer;
 
-public class Example {
+public class SimpleExample {
 
     public static void main(String[] args) {
         try {

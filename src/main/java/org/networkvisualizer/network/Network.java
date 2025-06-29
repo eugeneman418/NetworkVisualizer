@@ -3,7 +3,6 @@ package org.networkvisualizer.network;
 import com.graphhopper.ResponsePath;
 import com.graphhopper.util.PointList;
 import org.networkvisualizer.routing.Router;
-import org.opencv.core.Point;
 
 import java.util.*;
 
@@ -25,6 +24,7 @@ public class Network {
     public List<Double> distances;
 
     public IntersectionGraph intersectionGraph;
+
 
     public Network(List<Vertex> vertices, List<Edge> edges) {
         this.edges = edges;
@@ -74,7 +74,6 @@ public class Network {
 
         }
 
-
         intersectionGraph = IntersectionGraph.fromGhRoutes(ghRoutes);
 
 
@@ -82,7 +81,6 @@ public class Network {
     }
 
     public String toString() {
-        // Example: print parsed data
         StringBuilder str = new StringBuilder();
         str.append("Nodes:\n");
         for (var node : nodes.values()) {

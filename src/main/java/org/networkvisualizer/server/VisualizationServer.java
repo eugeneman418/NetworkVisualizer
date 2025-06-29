@@ -34,16 +34,19 @@ public class VisualizationServer {
         server.createContext("/link", new LinkHandler(network, timeline));
         server.createContext("/node", new NodeHandler(network, timeline));
 
-        for (int i = 0; i < network.intersectionGraph.paths.size(); i++) {
-            List<Point> path = network.intersectionGraph.paths.get(i);
-            System.out.print(i + ": ");
-            for (int edgeIdx : network.intersectionGraph.pathToEdges.get(path)) {
-                Network.Edge edge = network.edges.get(edgeIdx);
-                System.out.print(edge.toString() +", ");
-            }
-            System.out.println("");
-
-        }
+//        for (int i = 0; i < 1; i++) {
+//            List<Point> path = network.intersectionGraph.paths.get(i);
+//            System.out.print(i + ": ");
+//            for (int edgeIdx : network.intersectionGraph.pathToEdges.get(path)) {
+//                Network.Edge edge = network.edges.get(edgeIdx);
+//                System.out.print(edge.toString() +", ");
+//            }
+//            System.out.println("");
+//            for (int edgeIdx : network.intersectionGraph.pathToEdges.get(path)) {
+//                System.out.println(network.debugRoutes.get(edgeIdx));
+//            }
+//
+//        }
 
         server.start();
         System.out.println("Server started at http://localhost:"+port+"/");

@@ -53,19 +53,13 @@ public class LinkHandler implements HttpHandler {
             }
 
             // Parse and validate time
-            int timeIdx;
+            double time;
             try {
-                timeIdx = Integer.parseInt(queryParams.get("time").get(0));
+                time = Double.parseDouble(queryParams.get("time").get(0));
             } catch (NumberFormatException e) {
                 throw new IllegalArgumentException("Invalid value for time: must be a number");
             }
-            double time;
-            try {
-                time = timeline.getTimesteps().get(timeIdx);
-            } catch (Exception e) {
-                throw new IllegalArgumentException("Invalid index for time: " + timeIdx);
-            }
-
+            
             // Parse and validate modes
             Set<String> modes = new HashSet<>();
             String[] modeArray = queryParams.get("modes").get(0).split(",");

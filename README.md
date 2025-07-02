@@ -23,6 +23,8 @@ Here is a description of the server side packages and the classes they contain
 ## example
 ### Example
 Launches server for a 5 node network in Zuid-Holland with randomly generated events.
+### DistanceMatrixCalculator
+A small program that calculates distances between nodes on a network.
 ## network
 This package contains functions for simplifying routes and data structure for efficiently retrieving events on a route segment.
 ### IntersectionGraph

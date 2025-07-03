@@ -7,7 +7,7 @@ output_path = sys.argv[2] if len(sys.argv) > 2 else "network.json"
 
 modes = ["truck", "train", "barge"]
 
-network = {'vertices': [], 'edges': []}
+network = {'nodes': [], 'edges': []}
 
 with open(node_path, 'r') as node_file:
     csv_reader = csv.reader(node_file)

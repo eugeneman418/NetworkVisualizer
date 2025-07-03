@@ -2,12 +2,14 @@ package org.networkvisualizer.routing;
 
 import com.graphhopper.reader.ReaderWay;
 import com.graphhopper.routing.util.EncodingManager;
+import com.graphhopper.routing.util.FootFlagEncoder;
 import com.graphhopper.routing.util.RoadsFlagEncoder;
 import com.graphhopper.util.PMap;
 
 import static com.graphhopper.routing.util.EncodingManager.getKey;
 
-public class TrainFlagEncoder extends RoadsFlagEncoder {
+// there are issues with inheriting from RoadFlagEncoder, which causes GH to combine all 3 profiles when routing (e.g. train on water, barge on land). This seems to be a hacky fix
+public class TrainFlagEncoder extends FootFlagEncoder {
 
 
     public TrainFlagEncoder(PMap properties) {

@@ -1,0 +1,1001 @@
+time,from,to,mode,category,quantity
+0.0475,Delft,Leiden,train,D,12
+0.0475,Gouda,Delft,train,B,50
+0.0475,Leiden,Rotterdam,train,B,78
+0.0475,Delft,Rotterdam,train,D,85
+0.0475,Delft,The Hague,train,B,27
+0.0475,Delft,Gouda,train,A,55
+0.0475,Gouda,The Hague,train,A,78
+0.0475,Rotterdam,Delft,train,B,49
+0.0475,Gouda,Leiden,train,B,86
+0.0475,Leiden,Delft,train,D,93
+2.8258,Rotterdam,Delft,train,A,52
+2.8258,Rotterdam,Leiden,train,A,43
+2.8258,Leiden,The Hague,train,E,9
+2.8258,The Hague,Rotterdam,train,A,66
+2.8258,Gouda,Leiden,train,B,16
+2.8258,The Hague,Gouda,train,C,57
+2.8258,Gouda,Delft,train,E,38
+2.8258,The Hague,Gouda,train,D,100
+2.8258,The Hague,Leiden,train,D,36
+2.8258,Rotterdam,The Hague,train,B,79
+3.9,Leiden,The Hague,train,C,13
+3.9,Leiden,Gouda,train,E,73
+3.9,Gouda,The Hague,train,D,49
+3.9,Gouda,Delft,train,C,52
+3.9,Gouda,The Hague,train,B,75
+3.9,Gouda,The Hague,train,A,5
+3.9,Delft,Leiden,train,A,14
+3.9,Gouda,Rotterdam,train,C,57
+3.9,Rotterdam,Delft,train,E,34
+3.9,Delft,Rotterdam,train,E,11
+4.3519,The Hague,Delft,train,C,95
+4.3519,Delft,Gouda,train,B,45
+4.3519,Delft,The Hague,train,A,10
+4.3519,The Hague,Leiden,train,B,29
+4.3519,Delft,The Hague,train,C,85
+4.3519,Rotterdam,Leiden,train,C,5
+4.3519,The Hague,Delft,train,A,15
+4.3519,Delft,Leiden,train,A,75
+4.3519,Delft,Leiden,train,D,39
+4.3519,Rotterdam,Delft,train,A,57
+4.9293,Rotterdam,Leiden,train,B,23
+4.9293,The Hague,Delft,train,A,41
+4.9293,Leiden,Delft,train,B,80
+4.9293,Delft,The Hague,train,B,75
+4.9293,Delft,Gouda,train,A,13
+4.9293,The Hague,Gouda,train,A,27
+4.9293,Leiden,Gouda,train,B,87
+4.9293,The Hague,Gouda,train,D,1
+4.9293,Delft,Gouda,train,E,14
+4.9293,Delft,Rotterdam,train,E,29
+5.5677,The Hague,Leiden,train,D,17
+5.5677,The Hague,Delft,train,C,48
+5.5677,The Hague,Delft,train,E,8
+5.5677,Gouda,Rotterdam,train,B,68
+5.5677,Leiden,Delft,train,B,62
+5.5677,Gouda,Delft,train,D,85
+5.5677,The Hague,Gouda,train,B,32
+5.5677,Gouda,Delft,train,D,67
+5.5677,Rotterdam,Delft,train,A,30
+5.5677,Delft,Gouda,train,A,99
+6.9173,Rotterdam,Delft,train,A,33
+6.9173,Delft,The Hague,train,A,55
+6.9173,Leiden,Gouda,train,C,48
+6.9173,The Hague,Gouda,train,D,10
+6.9173,Rotterdam,The Hague,train,E,65
+6.9173,Rotterdam,Leiden,train,E,69
+6.9173,Gouda,The Hague,train,A,69
+6.9173,Rotterdam,The Hague,train,B,52
+6.9173,Gouda,Rotterdam,train,B,18
+6.9173,Gouda,Rotterdam,train,B,84
+7.7941,Delft,Leiden,train,B,98
+7.7941,Leiden,Rotterdam,train,E,78
+7.7941,Rotterdam,Delft,train,A,15
+7.7941,Rotterdam,The Hague,train,E,44
+7.7941,Delft,Leiden,train,D,41
+7.7941,Delft,The Hague,train,C,12
+7.7941,Delft,Rotterdam,train,E,55
+7.7941,The Hague,Delft,train,B,84
+7.7941,The Hague,Leiden,train,A,34
+7.7941,The Hague,Rotterdam,train,E,68
+9.8337,Gouda,Delft,train,A,77
+9.8337,Gouda,The Hague,train,E,7
+9.8337,Leiden,Gouda,train,D,48
+9.8337,Delft,Gouda,train,E,82
+9.8337,The Hague,Leiden,train,A,72
+9.8337,Gouda,Leiden,train,A,83
+9.8337,Gouda,Delft,train,D,2
+9.8337,Delft,The Hague,train,B,58
+9.8337,Delft,Gouda,train,E,75
+9.8337,The Hague,Delft,train,D,59
+10.743,Gouda,Leiden,train,C,84
+10.743,The Hague,Leiden,train,A,24
+10.743,Delft,Rotterdam,train,B,74
+10.743,Delft,The Hague,train,E,39
+10.743,Leiden,Gouda,train,E,29
+10.743,Gouda,Rotterdam,train,E,42
+10.743,The Hague,Gouda,train,B,81
+10.743,Rotterdam,The Hague,train,C,15
+10.743,The Hague,Gouda,train,E,17
+10.743,Leiden,Rotterdam,train,C,63
+14.7319,Leiden,The Hague,train,D,27
+14.7319,Leiden,Rotterdam,train,E,48
+14.7319,Leiden,The Hague,train,B,1
+14.7319,Gouda,The Hague,train,D,7
+14.7319,Rotterdam,Leiden,train,D,37
+14.7319,Rotterdam,Leiden,train,B,80
+14.7319,The Hague,Delft,train,C,60
+14.7319,The Hague,Leiden,train,C,3
+14.7319,The Hague,Leiden,train,D,14
+14.7319,Delft,The Hague,train,C,49
+15.3455,Gouda,The Hague,train,B,27
+15.3455,Delft,Rotterdam,train,C,98
+15.3455,Rotterdam,The Hague,train,D,49
+15.3455,Delft,Gouda,train,E,60
+15.3455,The Hague,Gouda,train,A,35
+15.3455,Delft,Rotterdam,train,E,14
+15.3455,The Hague,Leiden,train,B,63
+15.3455,Gouda,Delft,train,E,51
+15.3455,Rotterdam,Gouda,train,E,92
+15.3455,Gouda,Leiden,train,D,21
+16.3921,Rotterdam,Gouda,train,D,52
+16.3921,Delft,Rotterdam,train,E,91
+16.3921,Leiden,Delft,train,E,43
+16.3921,The Hague,Leiden,train,C,9
+16.3921,Gouda,The Hague,train,B,72
+16.3921,Rotterdam,Leiden,train,B,37
+16.3921,Delft,Leiden,train,A,34
+16.3921,Gouda,Leiden,train,A,25
+16.3921,The Hague,Gouda,train,C,89
+16.3921,The Hague,Rotterdam,train,A,1
+16.5674,Gouda,Leiden,train,E,97
+16.5674,Leiden,Gouda,train,A,34
+16.5674,Rotterdam,Delft,train,C,59
+16.5674,Delft,Gouda,train,B,67
+16.5674,Gouda,Rotterdam,train,C,65
+16.5674,Gouda,The Hague,train,B,46
+16.5674,Gouda,Rotterdam,train,C,71
+16.5674,Rotterdam,Leiden,train,B,91
+16.5674,Leiden,The Hague,train,B,24
+16.5674,Gouda,Leiden,train,A,44
+17.9065,Delft,Gouda,train,D,91
+17.9065,Rotterdam,Leiden,train,B,7
+17.9065,Gouda,The Hague,train,A,80
+17.9065,The Hague,Delft,train,A,18
+17.9065,Leiden,Rotterdam,train,A,60
+17.9065,Rotterdam,Gouda,train,E,64
+17.9065,Rotterdam,The Hague,train,D,21
+17.9065,Rotterdam,The Hague,train,B,32
+17.9065,Rotterdam,Gouda,train,D,12
+17.9065,Delft,Leiden,train,D,15
+18.3537,Leiden,The Hague,train,E,12
+18.3537,Leiden,Gouda,train,C,100
+18.3537,Gouda,Leiden,train,C,14
+18.3537,The Hague,Leiden,train,A,87
+18.3537,Gouda,The Hague,train,B,23
+18.3537,Rotterdam,Leiden,train,D,87
+18.3537,Gouda,Delft,train,E,55
+18.3537,Gouda,Rotterdam,train,A,34
+18.3537,Gouda,Rotterdam,train,E,60
+18.3537,Leiden,The Hague,train,D,73
+20.413,Delft,The Hague,train,C,60
+20.413,Rotterdam,Leiden,train,B,7
+20.413,Delft,Rotterdam,train,B,17
+20.413,Rotterdam,Gouda,train,A,47
+20.413,Delft,Gouda,train,A,75
+20.413,Leiden,Delft,train,A,28
+20.413,Gouda,The Hague,train,A,32
+20.413,Leiden,Gouda,train,E,1
+20.413,Leiden,Gouda,train,C,34
+20.413,Gouda,Delft,train,E,38
+20.5737,Delft,The Hague,train,D,6
+20.5737,Rotterdam,The Hague,train,B,5
+20.5737,Rotterdam,The Hague,train,A,70
+20.5737,Rotterdam,Gouda,train,D,18
+20.5737,Rotterdam,Gouda,train,D,51
+20.5737,Delft,Rotterdam,train,E,64
+20.5737,The Hague,Delft,train,A,91
+20.5737,Delft,Leiden,train,B,34
+20.5737,Gouda,Leiden,train,A,53
+20.5737,Rotterdam,Delft,train,A,29
+21.1293,Delft,Gouda,train,B,47
+21.1293,Leiden,Rotterdam,train,D,63
+21.1293,Gouda,Leiden,train,B,19
+21.1293,Leiden,Rotterdam,train,D,72
+21.1293,Leiden,Delft,train,B,11
+21.1293,Delft,Gouda,train,E,4
+21.1293,Gouda,Leiden,train,B,17
+21.1293,Gouda,Leiden,train,C,24
+21.1293,Rotterdam,The Hague,train,E,69
+21.1293,Gouda,Leiden,train,D,10
+21.4173,Delft,Gouda,train,A,5
+21.4173,Leiden,Delft,train,A,42
+21.4173,The Hague,Gouda,train,A,1
+21.4173,Rotterdam,Gouda,train,B,16
+21.4173,The Hague,Delft,train,B,58
+21.4173,Leiden,Gouda,train,D,1
+21.4173,The Hague,Rotterdam,train,D,66
+21.4173,Rotterdam,Leiden,train,B,70
+21.4173,The Hague,Gouda,train,A,71
+21.4173,Leiden,Delft,train,A,93
+24.5816,Gouda,Delft,train,B,77
+24.5816,Delft,Leiden,train,A,98
+24.5816,Gouda,Delft,train,E,20
+24.5816,Leiden,Delft,train,C,83
+24.5816,Delft,Rotterdam,train,A,20
+24.5816,The Hague,Rotterdam,train,C,64
+24.5816,Delft,Gouda,train,C,48
+24.5816,Gouda,The Hague,train,C,89
+24.5816,The Hague,Gouda,train,B,82
+24.5816,Gouda,Rotterdam,train,E,53
+24.6701,Rotterdam,The Hague,train,A,2
+24.6701,Gouda,The Hague,train,D,42
+24.6701,The Hague,Gouda,train,A,80
+24.6701,Delft,Rotterdam,train,E,22
+24.6701,Gouda,Leiden,train,C,96
+24.6701,The Hague,Rotterdam,train,A,81
+24.6701,Gouda,Rotterdam,train,A,8
+24.6701,Leiden,Gouda,train,A,99
+24.6701,Delft,The Hague,train,B,50
+24.6701,Rotterdam,Gouda,train,C,30
+25.8334,Gouda,The Hague,train,A,57
+25.8334,Leiden,Rotterdam,train,C,69
+25.8334,Delft,Gouda,train,E,64
+25.8334,The Hague,Delft,train,A,59
+25.8334,Delft,Rotterdam,train,B,51
+25.8334,Leiden,Gouda,train,A,11
+25.8334,The Hague,Gouda,train,C,37
+25.8334,The Hague,Gouda,train,B,79
+25.8334,Leiden,Delft,train,A,48
+25.8334,Leiden,The Hague,train,D,78
+28.1011,Gouda,Leiden,train,D,45
+28.1011,Delft,Gouda,train,C,36
+28.1011,The Hague,Leiden,train,C,59
+28.1011,Rotterdam,Leiden,train,D,79
+28.1011,Delft,Rotterdam,train,C,23
+28.1011,Gouda,Leiden,train,A,88
+28.1011,Leiden,The Hague,train,D,93
+28.1011,Delft,The Hague,train,E,63
+28.1011,Leiden,The Hague,train,E,47
+28.1011,Gouda,The Hague,train,D,86
+28.9305,Rotterdam,Gouda,train,A,10
+28.9305,Delft,The Hague,train,A,32
+28.9305,The Hague,Leiden,train,B,72
+28.9305,Leiden,Rotterdam,train,E,19
+28.9305,Delft,Gouda,train,C,87
+28.9305,Leiden,Rotterdam,train,E,57
+28.9305,Delft,Rotterdam,train,A,98
+28.9305,Leiden,Rotterdam,train,D,55
+28.9305,The Hague,Gouda,train,C,70
+28.9305,The Hague,Gouda,train,D,3
+29.1745,Delft,Rotterdam,train,D,78
+29.1745,Rotterdam,The Hague,train,C,21
+29.1745,Delft,Gouda,train,D,46
+29.1745,Gouda,Delft,train,C,84
+29.1745,Delft,Rotterdam,train,C,88
+29.1745,Delft,Gouda,train,E,47
+29.1745,Rotterdam,Delft,train,B,11
+29.1745,Delft,Gouda,train,C,95
+29.1745,Gouda,The Hague,train,C,21
+29.1745,The Hague,Leiden,train,E,14
+29.2563,Leiden,Gouda,train,C,75
+29.2563,Gouda,Rotterdam,train,A,65
+29.2563,Rotterdam,The Hague,train,A,29
+29.2563,Rotterdam,The Hague,train,A,6
+29.2563,Rotterdam,Leiden,train,C,20
+29.2563,Delft,The Hague,train,D,44
+29.2563,Leiden,Gouda,train,D,34
+29.2563,Gouda,The Hague,train,A,30
+29.2563,Rotterdam,The Hague,train,E,87
+29.2563,Rotterdam,Gouda,train,A,87
+29.8177,Leiden,Gouda,train,B,36
+29.8177,Rotterdam,Delft,train,E,90
+29.8177,Delft,Rotterdam,train,E,87
+29.8177,The Hague,Leiden,train,C,74
+29.8177,The Hague,Leiden,train,C,78
+29.8177,Rotterdam,Gouda,train,A,14
+29.8177,Gouda,Leiden,train,E,27
+29.8177,Gouda,Leiden,train,D,9
+29.8177,Rotterdam,Gouda,train,C,78
+29.8177,Leiden,Delft,train,D,60
+30.1275,The Hague,Rotterdam,train,D,48
+30.1275,Rotterdam,Gouda,train,C,40
+30.1275,Delft,Leiden,train,A,83
+30.1275,The Hague,Rotterdam,train,A,12
+30.1275,Gouda,Rotterdam,train,D,7
+30.1275,Rotterdam,The Hague,train,B,43
+30.1275,Gouda,Leiden,train,A,48
+30.1275,Gouda,The Hague,train,A,86
+30.1275,Rotterdam,Gouda,train,C,27
+30.1275,The Hague,Gouda,train,D,97
+30.6175,Gouda,Delft,train,B,58
+30.6175,Gouda,Rotterdam,train,C,13
+30.6175,Rotterdam,Leiden,train,A,17
+30.6175,Rotterdam,Gouda,train,B,38
+30.6175,Rotterdam,Leiden,train,B,55
+30.6175,Gouda,Delft,train,A,91
+30.6175,Delft,Rotterdam,train,B,9
+30.6175,Delft,The Hague,train,E,67
+30.6175,Gouda,The Hague,train,B,20
+30.6175,Gouda,Delft,train,A,24
+31.153,Rotterdam,Gouda,train,C,3
+31.153,The Hague,Rotterdam,train,E,99
+31.153,Delft,The Hague,train,C,3
+31.153,The Hague,Gouda,train,B,16
+31.153,The Hague,Rotterdam,train,A,14
+31.153,Rotterdam,Delft,train,B,63
+31.153,Leiden,The Hague,train,D,3
+31.153,Delft,Rotterdam,train,A,26
+31.153,Rotterdam,Gouda,train,D,94
+31.153,Gouda,Delft,train,D,96
+31.2602,Rotterdam,Delft,train,C,34
+31.2602,Rotterdam,Delft,train,A,15
+31.2602,Gouda,Delft,train,C,41
+31.2602,Leiden,The Hague,train,E,46
+31.2602,Leiden,The Hague,train,B,19
+31.2602,Rotterdam,Delft,train,D,49
+31.2602,Rotterdam,Gouda,train,C,34
+31.2602,Gouda,Rotterdam,train,C,46
+31.2602,Leiden,Delft,train,A,27
+31.2602,Delft,The Hague,train,B,12
+32.3558,Rotterdam,Delft,train,B,7
+32.3558,Leiden,The Hague,train,A,55
+32.3558,Leiden,Gouda,train,E,84
+32.3558,Leiden,Rotterdam,train,E,59
+32.3558,Leiden,Rotterdam,train,C,20
+32.3558,The Hague,Leiden,train,D,30
+32.3558,The Hague,Delft,train,C,41
+32.3558,Rotterdam,Gouda,train,C,91
+32.3558,The Hague,Gouda,train,C,92
+32.3558,The Hague,Gouda,train,A,21
+33.6008,Rotterdam,Gouda,train,C,87
+33.6008,Leiden,Rotterdam,train,A,10
+33.6008,Gouda,Delft,train,E,55
+33.6008,Delft,Rotterdam,train,B,80
+33.6008,Rotterdam,Leiden,train,A,99
+33.6008,Leiden,Rotterdam,train,E,87
+33.6008,Delft,Rotterdam,train,A,1
+33.6008,Rotterdam,Gouda,train,A,31
+33.6008,Delft,Rotterdam,train,E,71
+33.6008,Gouda,Leiden,train,D,27
+34.5392,Leiden,Delft,train,A,90
+34.5392,Delft,Rotterdam,train,E,89
+34.5392,Delft,The Hague,train,D,83
+34.5392,Gouda,Leiden,train,B,78
+34.5392,Leiden,The Hague,train,D,40
+34.5392,Gouda,Leiden,train,C,82
+34.5392,The Hague,Rotterdam,train,D,87
+34.5392,Gouda,Leiden,train,A,6
+34.5392,Rotterdam,The Hague,train,B,50
+34.5392,Delft,Leiden,train,D,83
+35.4915,Rotterdam,Gouda,train,B,65
+35.4915,Delft,Gouda,train,B,72
+35.4915,Leiden,Delft,train,A,14
+35.4915,The Hague,Rotterdam,train,E,51
+35.4915,Gouda,Leiden,train,B,15
+35.4915,Delft,Rotterdam,train,B,18
+35.4915,Rotterdam,Gouda,train,A,15
+35.4915,Leiden,The Hague,train,D,19
+35.4915,Delft,Leiden,train,E,85
+35.4915,Rotterdam,Leiden,train,D,63
+36.5843,Delft,Leiden,train,D,19
+36.5843,Leiden,The Hague,train,A,77
+36.5843,Gouda,Leiden,train,A,79
+36.5843,Leiden,The Hague,train,D,56
+36.5843,Leiden,Delft,train,B,6
+36.5843,Delft,Leiden,train,C,50
+36.5843,Gouda,Rotterdam,train,B,89
+36.5843,Leiden,Gouda,train,A,43
+36.5843,Rotterdam,Delft,train,B,46
+36.5843,Rotterdam,Delft,train,B,12
+36.9773,Leiden,Delft,train,D,62
+36.9773,Delft,Gouda,train,E,71
+36.9773,Leiden,Gouda,train,E,46
+36.9773,Delft,Leiden,train,D,47
+36.9773,Gouda,The Hague,train,B,60
+36.9773,Leiden,Rotterdam,train,E,61
+36.9773,The Hague,Leiden,train,C,12
+36.9773,Gouda,Rotterdam,train,C,15
+36.9773,Leiden,Delft,train,E,11
+36.9773,Delft,Rotterdam,train,C,86
+37.0852,Delft,Leiden,train,A,65
+37.0852,The Hague,Gouda,train,E,74
+37.0852,Gouda,Leiden,train,C,33
+37.0852,Leiden,Rotterdam,train,B,17
+37.0852,Rotterdam,Gouda,train,A,31
+37.0852,The Hague,Leiden,train,C,61
+37.0852,Gouda,Delft,train,A,48
+37.0852,The Hague,Gouda,train,C,11
+37.0852,Delft,Rotterdam,train,E,99
+37.0852,Delft,Gouda,train,A,82
+39.7408,Gouda,Delft,train,A,73
+39.7408,The Hague,Rotterdam,train,D,97
+39.7408,Leiden,Rotterdam,train,D,23
+39.7408,Delft,Leiden,train,C,94
+39.7408,Rotterdam,The Hague,train,C,72
+39.7408,Delft,Gouda,train,D,34
+39.7408,Leiden,Rotterdam,train,A,33
+39.7408,Rotterdam,Delft,train,D,61
+39.7408,Rotterdam,Delft,train,A,43
+39.7408,Leiden,Gouda,train,A,48
+41.1272,Leiden,The Hague,train,C,99
+41.1272,Delft,Gouda,train,E,95
+41.1272,Gouda,The Hague,train,E,14
+41.1272,Rotterdam,The Hague,train,D,39
+41.1272,Rotterdam,Gouda,train,C,77
+41.1272,Gouda,The Hague,train,A,75
+41.1272,The Hague,Delft,train,E,87
+41.1272,Delft,Leiden,train,C,67
+41.1272,Leiden,The Hague,train,C,84
+41.1272,The Hague,Delft,train,D,81
+41.8937,Gouda,Delft,train,D,76
+41.8937,Rotterdam,Delft,train,E,89
+41.8937,The Hague,Delft,train,C,47
+41.8937,Gouda,Rotterdam,train,A,59
+41.8937,The Hague,Delft,train,A,86
+41.8937,The Hague,Delft,train,D,85
+41.8937,Gouda,The Hague,train,C,55
+41.8937,Delft,Rotterdam,train,C,97
+41.8937,The Hague,Delft,train,B,97
+41.8937,Leiden,Rotterdam,train,C,77
+42.0643,Delft,The Hague,train,D,28
+42.0643,Leiden,Delft,train,C,32
+42.0643,Rotterdam,The Hague,train,C,65
+42.0643,Delft,Leiden,train,E,64
+42.0643,Rotterdam,The Hague,train,D,41
+42.0643,Delft,Gouda,train,A,93
+42.0643,Delft,Leiden,train,E,53
+42.0643,Rotterdam,Gouda,train,C,88
+42.0643,Rotterdam,Leiden,train,C,53
+42.0643,The Hague,Delft,train,A,88
+45.1863,The Hague,Delft,train,C,29
+45.1863,Gouda,The Hague,train,B,53
+45.1863,Rotterdam,The Hague,train,E,21
+45.1863,The Hague,Delft,train,A,7
+45.1863,Rotterdam,The Hague,train,B,31
+45.1863,Delft,Rotterdam,train,C,22
+45.1863,The Hague,Leiden,train,E,17
+45.1863,Rotterdam,Leiden,train,E,64
+45.1863,The Hague,Rotterdam,train,C,29
+45.1863,Delft,Gouda,train,D,49
+46.2597,Gouda,Leiden,train,D,45
+46.2597,Rotterdam,Gouda,train,B,11
+46.2597,Leiden,Rotterdam,train,A,27
+46.2597,Rotterdam,Delft,train,A,56
+46.2597,Gouda,Leiden,train,B,62
+46.2597,Leiden,Gouda,train,B,64
+46.2597,Gouda,Rotterdam,train,D,34
+46.2597,The Hague,Leiden,train,E,22
+46.2597,Delft,Gouda,train,A,18
+46.2597,Rotterdam,Leiden,train,E,49
+47.0623,Delft,The Hague,train,C,94
+47.0623,Delft,The Hague,train,C,95
+47.0623,Gouda,Delft,train,B,20
+47.0623,Gouda,The Hague,train,B,51
+47.0623,Delft,Gouda,train,A,62
+47.0623,Leiden,Gouda,train,E,95
+47.0623,Delft,Leiden,train,A,1
+47.0623,The Hague,Delft,train,E,56
+47.0623,Gouda,Delft,train,E,75
+47.0623,Delft,The Hague,train,A,61
+47.493,Rotterdam,The Hague,train,D,54
+47.493,Gouda,Rotterdam,train,C,35
+47.493,Leiden,Rotterdam,train,E,5
+47.493,Rotterdam,Delft,train,D,28
+47.493,Delft,The Hague,train,B,53
+47.493,Gouda,Leiden,train,D,68
+47.493,Delft,Leiden,train,D,73
+47.493,Leiden,Gouda,train,C,6
+47.493,The Hague,Leiden,train,C,74
+47.493,Leiden,Gouda,train,E,66
+48.9144,Delft,Gouda,train,B,58
+48.9144,Delft,Rotterdam,train,E,70
+48.9144,Delft,The Hague,train,A,17
+48.9144,Gouda,Leiden,train,A,10
+48.9144,Leiden,The Hague,train,A,90
+48.9144,Leiden,Gouda,train,A,1
+48.9144,Rotterdam,Leiden,train,B,80
+48.9144,Gouda,The Hague,train,C,49
+48.9144,The Hague,Delft,train,D,5
+48.9144,Delft,The Hague,train,C,92
+49.7197,Delft,The Hague,train,A,58
+49.7197,Rotterdam,The Hague,train,A,86
+49.7197,Rotterdam,Leiden,train,B,77
+49.7197,Delft,The Hague,train,B,14
+49.7197,Leiden,Rotterdam,train,A,54
+49.7197,Delft,Gouda,train,D,68
+49.7197,Gouda,Delft,train,E,68
+49.7197,Delft,Rotterdam,train,D,90
+49.7197,Gouda,The Hague,train,B,27
+49.7197,Gouda,The Hague,train,E,43
+51.9559,The Hague,Delft,train,E,55
+51.9559,Delft,Leiden,train,B,67
+51.9559,The Hague,Gouda,train,D,80
+51.9559,Leiden,Gouda,train,E,8
+51.9559,Rotterdam,The Hague,train,A,28
+51.9559,Rotterdam,Delft,train,E,12
+51.9559,Leiden,Gouda,train,A,32
+51.9559,Rotterdam,Leiden,train,D,42
+51.9559,Delft,Leiden,train,E,74
+51.9559,The Hague,Gouda,train,D,72
+52.6732,Rotterdam,Delft,train,A,10
+52.6732,Leiden,Rotterdam,train,D,74
+52.6732,Leiden,Delft,train,E,39
+52.6732,The Hague,Delft,train,E,1
+52.6732,Leiden,The Hague,train,B,86
+52.6732,Gouda,The Hague,train,E,44
+52.6732,The Hague,Rotterdam,train,C,36
+52.6732,Rotterdam,Delft,train,D,68
+52.6732,The Hague,Gouda,train,D,38
+52.6732,Leiden,Gouda,train,E,3
+53.9623,Rotterdam,Gouda,train,E,25
+53.9623,Rotterdam,Leiden,train,D,43
+53.9623,Gouda,Leiden,train,E,55
+53.9623,Delft,Gouda,train,C,44
+53.9623,Rotterdam,Delft,train,E,7
+53.9623,Leiden,Delft,train,B,14
+53.9623,Delft,Gouda,train,D,92
+53.9623,Leiden,The Hague,train,E,17
+53.9623,The Hague,Rotterdam,train,C,16
+53.9623,Gouda,Rotterdam,train,B,26
+55.5894,Gouda,Leiden,train,B,4
+55.5894,The Hague,Leiden,train,E,96
+55.5894,The Hague,Leiden,train,E,45
+55.5894,Gouda,Leiden,train,C,47
+55.5894,Rotterdam,Gouda,train,C,88
+55.5894,Leiden,Rotterdam,train,A,95
+55.5894,Rotterdam,Delft,train,D,56
+55.5894,Rotterdam,Delft,train,B,42
+55.5894,Leiden,Rotterdam,train,A,49
+55.5894,Gouda,The Hague,train,C,96
+59.43,Rotterdam,Gouda,train,D,90
+59.43,Rotterdam,Delft,train,C,57
+59.43,Delft,Gouda,train,B,4
+59.43,The Hague,Delft,train,C,44
+59.43,The Hague,Gouda,train,E,32
+59.43,Rotterdam,Delft,train,D,29
+59.43,Gouda,The Hague,train,B,30
+59.43,The Hague,Leiden,train,D,70
+59.43,Delft,Gouda,train,B,28
+59.43,Delft,Leiden,train,B,84
+59.695,Gouda,Delft,train,C,63
+59.695,Gouda,Delft,train,A,70
+59.695,Gouda,The Hague,train,D,8
+59.695,The Hague,Delft,train,E,91
+59.695,Gouda,Leiden,train,D,66
+59.695,Rotterdam,Leiden,train,C,75
+59.695,Gouda,The Hague,train,C,33
+59.695,Rotterdam,The Hague,train,A,56
+59.695,Rotterdam,The Hague,train,C,58
+59.695,Leiden,Rotterdam,train,B,65
+59.7297,Delft,Rotterdam,train,A,57
+59.7297,Gouda,Leiden,train,A,30
+59.7297,Gouda,Leiden,train,E,68
+59.7297,Rotterdam,Gouda,train,D,41
+59.7297,The Hague,Rotterdam,train,B,4
+59.7297,The Hague,Rotterdam,train,C,43
+59.7297,Gouda,Leiden,train,E,13
+59.7297,Leiden,Gouda,train,C,13
+59.7297,Leiden,Delft,train,A,62
+59.7297,Gouda,Delft,train,D,46
+59.8996,Rotterdam,Delft,train,A,46
+59.8996,The Hague,Leiden,train,D,87
+59.8996,Rotterdam,Gouda,train,D,40
+59.8996,The Hague,Rotterdam,train,A,38
+59.8996,Leiden,Rotterdam,train,A,28
+59.8996,The Hague,Gouda,train,D,84
+59.8996,Delft,Rotterdam,train,A,51
+59.8996,Gouda,The Hague,train,A,26
+59.8996,Gouda,The Hague,train,E,92
+59.8996,Leiden,Rotterdam,train,A,1
+60.2657,Delft,Gouda,train,E,48
+60.2657,Rotterdam,Delft,train,D,4
+60.2657,Rotterdam,Gouda,train,E,8
+60.2657,Rotterdam,The Hague,train,D,26
+60.2657,The Hague,Delft,train,C,56
+60.2657,Gouda,Leiden,train,B,22
+60.2657,Leiden,The Hague,train,E,81
+60.2657,Leiden,Rotterdam,train,E,42
+60.2657,Rotterdam,Delft,train,C,98
+60.2657,The Hague,Gouda,train,D,74
+60.4683,Leiden,Gouda,train,C,22
+60.4683,Gouda,The Hague,train,E,42
+60.4683,The Hague,Leiden,train,B,39
+60.4683,Delft,Gouda,train,E,16
+60.4683,Rotterdam,Delft,train,C,29
+60.4683,Gouda,The Hague,train,C,53
+60.4683,The Hague,Delft,train,E,57
+60.4683,The Hague,Delft,train,B,33
+60.4683,The Hague,Leiden,train,D,32
+60.4683,Delft,Gouda,train,E,64
+61.1723,Delft,Leiden,train,B,89
+61.1723,Leiden,Gouda,train,C,13
+61.1723,Rotterdam,Delft,train,E,47
+61.1723,Delft,The Hague,train,A,20
+61.1723,Gouda,Rotterdam,train,A,86
+61.1723,The Hague,Gouda,train,D,72
+61.1723,Leiden,Delft,train,C,84
+61.1723,Leiden,Delft,train,D,40
+61.1723,The Hague,Delft,train,B,80
+61.1723,The Hague,Rotterdam,train,B,74
+62.2175,The Hague,Delft,train,D,54
+62.2175,Leiden,Gouda,train,C,95
+62.2175,Rotterdam,Delft,train,D,99
+62.2175,Leiden,Delft,train,A,35
+62.2175,Gouda,Leiden,train,D,74
+62.2175,Leiden,Gouda,train,B,46
+62.2175,Rotterdam,Leiden,train,A,76
+62.2175,The Hague,Leiden,train,B,6
+62.2175,The Hague,Leiden,train,D,19
+62.2175,Rotterdam,Leiden,train,E,32
+62.7721,Leiden,Delft,train,C,30
+62.7721,Leiden,Rotterdam,train,E,25
+62.7721,Leiden,Gouda,train,C,45
+62.7721,The Hague,Gouda,train,A,23
+62.7721,The Hague,Leiden,train,B,46
+62.7721,Rotterdam,Leiden,train,D,19
+62.7721,Gouda,Rotterdam,train,C,55
+62.7721,Rotterdam,Gouda,train,C,68
+62.7721,Gouda,Leiden,train,C,20
+62.7721,Gouda,Rotterdam,train,D,49
+65.0762,Delft,Rotterdam,train,A,100
+65.0762,Leiden,The Hague,train,B,17
+65.0762,Rotterdam,Leiden,train,E,30
+65.0762,Leiden,Delft,train,B,72
+65.0762,Delft,Leiden,train,C,32
+65.0762,Leiden,Gouda,train,D,87
+65.0762,Delft,Leiden,train,C,41
+65.0762,Delft,The Hague,train,E,39
+65.0762,Gouda,Rotterdam,train,E,72
+65.0762,Rotterdam,Leiden,train,A,91
+65.1612,Delft,Gouda,train,B,90
+65.1612,The Hague,Rotterdam,train,C,40
+65.1612,Delft,The Hague,train,C,91
+65.1612,Delft,The Hague,train,D,5
+65.1612,Delft,Leiden,train,C,98
+65.1612,Leiden,The Hague,train,E,31
+65.1612,Gouda,Rotterdam,train,D,33
+65.1612,Gouda,Rotterdam,train,E,81
+65.1612,Gouda,The Hague,train,E,22
+65.1612,Rotterdam,Gouda,train,D,99
+65.8526,Leiden,The Hague,train,E,47
+65.8526,The Hague,Leiden,train,C,18
+65.8526,Leiden,The Hague,train,B,26
+65.8526,Leiden,Delft,train,A,22
+65.8526,Leiden,Delft,train,B,38
+65.8526,Delft,Rotterdam,train,D,71
+65.8526,Rotterdam,Leiden,train,A,46
+65.8526,Leiden,Delft,train,A,86
+65.8526,Gouda,Delft,train,A,54
+65.8526,The Hague,Rotterdam,train,E,66
+66.7573,Leiden,The Hague,train,E,34
+66.7573,Delft,Rotterdam,train,A,42
+66.7573,The Hague,Delft,train,E,95
+66.7573,Leiden,Rotterdam,train,D,74
+66.7573,Gouda,Delft,train,D,18
+66.7573,Gouda,Delft,train,C,29
+66.7573,Rotterdam,Leiden,train,D,73
+66.7573,The Hague,Rotterdam,train,A,98
+66.7573,Rotterdam,The Hague,train,D,24
+66.7573,Delft,Leiden,train,E,93
+67.3426,Gouda,Delft,train,E,87
+67.3426,Delft,Gouda,train,B,28
+67.3426,Leiden,The Hague,train,C,10
+67.3426,Rotterdam,Delft,train,D,11
+67.3426,Rotterdam,Delft,train,B,62
+67.3426,Rotterdam,Gouda,train,E,89
+67.3426,Gouda,Leiden,train,D,80
+67.3426,The Hague,Delft,train,E,66
+67.3426,The Hague,Gouda,train,B,12
+67.3426,Rotterdam,The Hague,train,E,53
+68.3092,Gouda,Delft,train,B,75
+68.3092,Rotterdam,The Hague,train,B,97
+68.3092,Delft,Gouda,train,B,35
+68.3092,Rotterdam,Leiden,train,A,6
+68.3092,Gouda,Delft,train,B,23
+68.3092,Delft,Gouda,train,D,83
+68.3092,Gouda,The Hague,train,D,85
+68.3092,Leiden,Delft,train,D,47
+68.3092,Rotterdam,The Hague,train,D,44
+68.3092,The Hague,Gouda,train,E,39
+70.7728,The Hague,Rotterdam,train,B,82
+70.7728,Rotterdam,The Hague,train,D,80
+70.7728,The Hague,Leiden,train,D,31
+70.7728,Leiden,Rotterdam,train,A,52
+70.7728,Leiden,Gouda,train,A,9
+70.7728,The Hague,Gouda,train,B,56
+70.7728,Gouda,Delft,train,D,97
+70.7728,The Hague,Delft,train,B,82
+70.7728,Delft,Rotterdam,train,E,26
+70.7728,Delft,The Hague,train,C,26
+71.0659,Leiden,Rotterdam,train,A,21
+71.0659,Leiden,Rotterdam,train,C,14
+71.0659,The Hague,Leiden,train,E,15
+71.0659,Leiden,Rotterdam,train,D,91
+71.0659,The Hague,Gouda,train,C,13
+71.0659,Rotterdam,The Hague,train,D,78
+71.0659,The Hague,Gouda,train,D,23
+71.0659,Leiden,Rotterdam,train,A,36
+71.0659,Gouda,Leiden,train,C,32
+71.0659,Gouda,The Hague,train,A,59
+72.3951,Gouda,Leiden,train,B,85
+72.3951,Rotterdam,Gouda,train,A,52
+72.3951,Delft,Gouda,train,B,15
+72.3951,Rotterdam,Leiden,train,C,25
+72.3951,Rotterdam,Leiden,train,B,88
+72.3951,Rotterdam,The Hague,train,D,20
+72.3951,Rotterdam,Delft,train,B,60
+72.3951,Gouda,Leiden,train,A,58
+72.3951,Leiden,Gouda,train,A,17
+72.3951,Gouda,Leiden,train,C,68
+72.8576,The Hague,Leiden,train,B,90
+72.8576,Leiden,Rotterdam,train,B,54
+72.8576,Rotterdam,Delft,train,A,64
+72.8576,Rotterdam,Gouda,train,D,71
+72.8576,Rotterdam,Gouda,train,E,55
+72.8576,Delft,Rotterdam,train,D,58
+72.8576,Delft,The Hague,train,B,49
+72.8576,Rotterdam,Leiden,train,C,93
+72.8576,Gouda,The Hague,train,E,26
+72.8576,Rotterdam,Delft,train,A,77
+73.1246,Rotterdam,Gouda,train,C,17
+73.1246,Gouda,Leiden,train,A,52
+73.1246,Gouda,Leiden,train,C,11
+73.1246,Delft,Gouda,train,E,40
+73.1246,Rotterdam,The Hague,train,A,60
+73.1246,Rotterdam,The Hague,train,D,37
+73.1246,Delft,Rotterdam,train,E,94
+73.1246,The Hague,Leiden,train,C,8
+73.1246,Leiden,Gouda,train,B,4
+73.1246,Leiden,Rotterdam,train,B,38
+73.535,Leiden,Gouda,train,D,75
+73.535,Gouda,Leiden,train,A,40
+73.535,Leiden,Rotterdam,train,D,75
+73.535,Delft,The Hague,train,E,8
+73.535,Gouda,The Hague,train,B,23
+73.535,Rotterdam,Leiden,train,D,33
+73.535,Leiden,Rotterdam,train,C,29
+73.535,Leiden,Delft,train,A,74
+73.535,The Hague,Gouda,train,C,53
+73.535,The Hague,Rotterdam,train,A,85
+73.5907,Gouda,The Hague,train,C,8
+73.5907,Leiden,The Hague,train,D,68
+73.5907,Delft,The Hague,train,D,33
+73.5907,Leiden,Gouda,train,C,13
+73.5907,Delft,Rotterdam,train,E,21
+73.5907,Leiden,Delft,train,B,25
+73.5907,Leiden,The Hague,train,E,69
+73.5907,Rotterdam,Leiden,train,B,15
+73.5907,Leiden,Rotterdam,train,D,70
+73.5907,Leiden,Gouda,train,A,16
+74.1942,Rotterdam,The Hague,train,D,53
+74.1942,The Hague,Leiden,train,E,29
+74.1942,The Hague,Gouda,train,D,95
+74.1942,Gouda,Leiden,train,E,5
+74.1942,Delft,Rotterdam,train,C,23
+74.1942,Rotterdam,Gouda,train,B,56
+74.1942,Leiden,Gouda,train,E,28
+74.1942,Gouda,The Hague,train,D,55
+74.1942,The Hague,Gouda,train,C,27
+74.1942,Leiden,Gouda,train,D,73
+76.2472,Rotterdam,Gouda,train,B,90
+76.2472,Gouda,Rotterdam,train,B,46
+76.2472,Gouda,Rotterdam,train,B,80
+76.2472,Rotterdam,Delft,train,B,86
+76.2472,The Hague,Rotterdam,train,E,95
+76.2472,Delft,The Hague,train,B,74
+76.2472,Delft,Gouda,train,B,75
+76.2472,Rotterdam,Gouda,train,A,51
+76.2472,Gouda,Delft,train,B,27
+76.2472,Delft,Gouda,train,E,16
+78.2115,Rotterdam,The Hague,train,A,38
+78.2115,The Hague,Leiden,train,E,21
+78.2115,Gouda,Leiden,train,D,10
+78.2115,Leiden,Gouda,train,B,32
+78.2115,The Hague,Rotterdam,train,A,88
+78.2115,Gouda,Delft,train,D,100
+78.2115,The Hague,Rotterdam,train,A,55
+78.2115,Leiden,Gouda,train,A,38
+78.2115,Rotterdam,Delft,train,E,36
+78.2115,Delft,Rotterdam,train,A,75
+78.315,Delft,Gouda,train,E,88
+78.315,Gouda,Rotterdam,train,D,26
+78.315,Delft,Gouda,train,A,17
+78.315,Gouda,Delft,train,E,74
+78.315,Gouda,The Hague,train,C,3
+78.315,The Hague,Gouda,train,C,43
+78.315,The Hague,Delft,train,A,55
+78.315,Delft,The Hague,train,D,87
+78.315,Gouda,Rotterdam,train,A,88
+78.315,Rotterdam,Leiden,train,A,35
+79.2271,Delft,Rotterdam,train,B,18
+79.2271,The Hague,Rotterdam,train,D,80
+79.2271,Delft,The Hague,train,D,80
+79.2271,Delft,The Hague,train,D,19
+79.2271,Rotterdam,Gouda,train,E,89
+79.2271,Delft,The Hague,train,C,32
+79.2271,Delft,Gouda,train,C,82
+79.2271,Gouda,Delft,train,B,24
+79.2271,Delft,The Hague,train,E,59
+79.2271,Rotterdam,Gouda,train,C,59
+79.7006,Gouda,Rotterdam,train,E,3
+79.7006,Gouda,Leiden,train,B,25
+79.7006,Delft,Gouda,train,A,1
+79.7006,The Hague,Delft,train,B,78
+79.7006,The Hague,Leiden,train,C,60
+79.7006,The Hague,Leiden,train,C,45
+79.7006,Delft,Leiden,train,A,10
+79.7006,Gouda,The Hague,train,A,35
+79.7006,Leiden,The Hague,train,C,86
+79.7006,Leiden,Delft,train,D,16
+80.1261,The Hague,Leiden,train,E,83
+80.1261,Gouda,Leiden,train,E,13
+80.1261,Leiden,The Hague,train,B,95
+80.1261,The Hague,Delft,train,E,39
+80.1261,Gouda,Rotterdam,train,A,56
+80.1261,Leiden,Gouda,train,A,32
+80.1261,Rotterdam,The Hague,train,A,1
+80.1261,Gouda,Delft,train,D,38
+80.1261,Gouda,Leiden,train,C,36
+80.1261,Delft,The Hague,train,A,95
+80.3354,Leiden,Gouda,train,C,94
+80.3354,Leiden,Gouda,train,A,21
+80.3354,Rotterdam,Delft,train,E,77
+80.3354,Delft,Gouda,train,A,67
+80.3354,Leiden,Gouda,train,A,73
+80.3354,Gouda,Delft,train,E,72
+80.3354,Leiden,Rotterdam,train,E,73
+80.3354,Leiden,The Hague,train,A,10
+80.3354,Delft,The Hague,train,B,50
+80.3354,Leiden,Gouda,train,E,56
+81.5499,Rotterdam,The Hague,train,D,97
+81.5499,Rotterdam,The Hague,train,A,72
+81.5499,Rotterdam,The Hague,train,B,70
+81.5499,The Hague,Gouda,train,C,2
+81.5499,Leiden,Delft,train,B,71
+81.5499,The Hague,Leiden,train,A,71
+81.5499,Gouda,Delft,train,C,78
+81.5499,Rotterdam,The Hague,train,C,90
+81.5499,The Hague,Rotterdam,train,A,65
+81.5499,Leiden,Delft,train,C,27
+82.8138,The Hague,Delft,train,A,44
+82.8138,The Hague,Delft,train,B,57
+82.8138,Delft,Leiden,train,B,82
+82.8138,The Hague,Rotterdam,train,C,52
+82.8138,Leiden,Rotterdam,train,A,81
+82.8138,Leiden,Delft,train,D,70
+82.8138,Delft,Leiden,train,E,5
+82.8138,Leiden,Delft,train,E,51
+82.8138,Rotterdam,Gouda,train,B,64
+82.8138,Rotterdam,Leiden,train,E,75
+83.4706,The Hague,Delft,train,B,65
+83.4706,The Hague,Gouda,train,A,41
+83.4706,Delft,Leiden,train,C,50
+83.4706,Rotterdam,The Hague,train,A,62
+83.4706,The Hague,Delft,train,E,5
+83.4706,Rotterdam,Leiden,train,C,93
+83.4706,Rotterdam,The Hague,train,C,10
+83.4706,The Hague,Leiden,train,B,89
+83.4706,Delft,Rotterdam,train,E,24
+83.4706,Leiden,Delft,train,D,46
+83.5369,Leiden,Gouda,train,A,19
+83.5369,Leiden,The Hague,train,C,100
+83.5369,Gouda,Leiden,train,E,43
+83.5369,Leiden,The Hague,train,A,98
+83.5369,Delft,Rotterdam,train,E,69
+83.5369,Leiden,The Hague,train,D,62
+83.5369,Gouda,The Hague,train,D,42
+83.5369,Gouda,Delft,train,E,95
+83.5369,Gouda,Leiden,train,A,89
+83.5369,The Hague,Leiden,train,A,54
+88.3608,Gouda,The Hague,train,C,92
+88.3608,Delft,The Hague,train,E,57
+88.3608,Delft,The Hague,train,A,44
+88.3608,The Hague,Leiden,train,D,94
+88.3608,Leiden,Delft,train,E,71
+88.3608,Gouda,Delft,train,A,18
+88.3608,Delft,Leiden,train,B,12
+88.3608,Leiden,The Hague,train,A,52
+88.3608,The Hague,Rotterdam,train,A,12
+88.3608,Leiden,Gouda,train,E,40
+92.4058,Rotterdam,Gouda,train,B,84
+92.4058,Delft,Gouda,train,B,68
+92.4058,Rotterdam,Gouda,train,D,96
+92.4058,Leiden,Gouda,train,B,24
+92.4058,The Hague,Leiden,train,A,85
+92.4058,Delft,Leiden,train,A,24
+92.4058,Delft,Rotterdam,train,B,79
+92.4058,Rotterdam,Gouda,train,A,33
+92.4058,Delft,Rotterdam,train,E,84
+92.4058,The Hague,Gouda,train,C,82
+94.8126,The Hague,Rotterdam,train,B,41
+94.8126,Delft,Rotterdam,train,B,72
+94.8126,Leiden,Rotterdam,train,B,74
+94.8126,Delft,The Hague,train,E,63
+94.8126,Leiden,Gouda,train,C,91
+94.8126,Gouda,Rotterdam,train,D,11
+94.8126,Gouda,Rotterdam,train,A,51
+94.8126,Delft,The Hague,train,D,16
+94.8126,Rotterdam,Leiden,train,D,18
+94.8126,Gouda,Delft,train,B,22
+94.8706,Delft,The Hague,train,D,82
+94.8706,Gouda,The Hague,train,E,75
+94.8706,Leiden,Gouda,train,B,68
+94.8706,Delft,Gouda,train,B,30
+94.8706,Rotterdam,Gouda,train,B,78
+94.8706,Gouda,Delft,train,A,36
+94.8706,Delft,Leiden,train,E,18
+94.8706,Gouda,Delft,train,A,55
+94.8706,Rotterdam,Leiden,train,D,50
+94.8706,Leiden,Gouda,train,D,65
+94.9664,Leiden,The Hague,train,A,72
+94.9664,Leiden,Gouda,train,A,76
+94.9664,Rotterdam,Leiden,train,B,36
+94.9664,The Hague,Rotterdam,train,B,12
+94.9664,Rotterdam,The Hague,train,A,5
+94.9664,Leiden,Gouda,train,C,91
+94.9664,Gouda,The Hague,train,E,3
+94.9664,The Hague,Gouda,train,C,48
+94.9664,Leiden,The Hague,train,D,47
+94.9664,Rotterdam,Delft,train,E,97
+96.1078,Delft,Rotterdam,train,E,55
+96.1078,Leiden,Gouda,train,A,51
+96.1078,Rotterdam,Leiden,train,C,10
+96.1078,Leiden,Gouda,train,A,68
+96.1078,Leiden,Delft,train,D,86
+96.1078,Rotterdam,The Hague,train,A,81
+96.1078,Leiden,Rotterdam,train,D,20
+96.1078,Leiden,Rotterdam,train,D,52
+96.1078,Delft,The Hague,train,B,96
+96.1078,Rotterdam,Delft,train,D,87
+96.5108,Rotterdam,The Hague,train,E,53
+96.5108,The Hague,Leiden,train,E,37
+96.5108,Gouda,Delft,train,A,81
+96.5108,Rotterdam,Leiden,train,E,47
+96.5108,Rotterdam,Gouda,train,B,55
+96.5108,Delft,Rotterdam,train,D,71
+96.5108,Gouda,Delft,train,A,81
+96.5108,Leiden,Rotterdam,train,B,20
+96.5108,Rotterdam,Leiden,train,B,93
+96.5108,The Hague,Delft,train,A,33
+97.0897,The Hague,Rotterdam,train,C,6
+97.0897,Rotterdam,Leiden,train,B,44
+97.0897,Gouda,Delft,train,D,83
+97.0897,Leiden,Rotterdam,train,E,60
+97.0897,Rotterdam,Gouda,train,D,51
+97.0897,Gouda,Delft,train,A,63
+97.0897,Leiden,Rotterdam,train,D,86
+97.0897,Gouda,Delft,train,E,68
+97.0897,Rotterdam,Gouda,train,A,39
+97.0897,Leiden,The Hague,train,A,42
+97.4101,Gouda,The Hague,train,B,60
+97.4101,Rotterdam,Leiden,train,C,24
+97.4101,Rotterdam,Leiden,train,C,37
+97.4101,Rotterdam,Leiden,train,D,97
+97.4101,The Hague,Delft,train,A,99
+97.4101,Gouda,Rotterdam,train,E,29
+97.4101,Leiden,The Hague,train,E,86
+97.4101,Rotterdam,The Hague,train,E,45
+97.4101,Rotterdam,Leiden,train,E,19
+97.4101,Delft,The Hague,train,E,64
+97.9223,Gouda,Delft,train,E,69
+97.9223,The Hague,Rotterdam,train,D,1
+97.9223,Delft,Gouda,train,B,95
+97.9223,Leiden,The Hague,train,B,32
+97.9223,Gouda,Rotterdam,train,A,32
+97.9223,Delft,Leiden,train,A,37
+97.9223,Rotterdam,The Hague,train,C,83
+97.9223,Rotterdam,Leiden,train,A,36
+97.9223,The Hague,Leiden,train,C,7
+97.9223,Leiden,Rotterdam,train,B,85
+98.0253,Gouda,The Hague,train,D,45
+98.0253,Delft,Gouda,train,D,56
+98.0253,Rotterdam,Delft,train,D,2
+98.0253,The Hague,Rotterdam,train,B,70
+98.0253,Rotterdam,The Hague,train,B,66
+98.0253,Delft,The Hague,train,B,92
+98.0253,Leiden,Gouda,train,A,81
+98.0253,Gouda,Rotterdam,train,E,10
+98.0253,Rotterdam,The Hague,train,A,54
+98.0253,Delft,Leiden,train,D,32
+98.8555,Leiden,Delft,train,D,57
+98.8555,The Hague,Gouda,train,B,31
+98.8555,The Hague,Rotterdam,train,B,58
+98.8555,Rotterdam,The Hague,train,B,99
+98.8555,Leiden,The Hague,train,B,51
+98.8555,Leiden,Delft,train,D,2
+98.8555,Delft,Leiden,train,B,55
+98.8555,Gouda,Rotterdam,train,E,51
+98.8555,Gouda,Leiden,train,C,54
+98.8555,The Hague,Rotterdam,train,B,30
+99.4386,Gouda,Delft,train,A,70
+99.4386,Delft,Gouda,train,A,41
+99.4386,Rotterdam,Leiden,train,C,26
+99.4386,Rotterdam,Gouda,train,B,36
+99.4386,Rotterdam,Gouda,train,D,70
+99.4386,Gouda,Leiden,train,A,24
+99.4386,Delft,Leiden,train,B,14
+99.4386,Gouda,Leiden,train,E,13
+99.4386,Leiden,Gouda,train,E,55
+99.4386,Rotterdam,Leiden,train,C,16

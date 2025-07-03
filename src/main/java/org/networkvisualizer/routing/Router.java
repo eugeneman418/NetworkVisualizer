@@ -18,9 +18,9 @@ public class Router {
         gh.setGraphHopperLocation("target/routing-graph-cache");
 
         gh.setProfiles(
-                new Profile("car").setVehicle("car").setWeighting("fastest").setTurnCosts(false),
+                new Profile("car").setVehicle("car").setWeighting("shortest").setTurnCosts(false),
                 new Profile("train").setVehicle("train").setWeighting("shortest").setTurnCosts(false),
-                new Profile("barge").setVehicle("barge").setWeighting("fastest").setTurnCosts(false)
+                new Profile("barge").setVehicle("barge").setWeighting("shortest").setTurnCosts(false)
         );
 
         gh.getCHPreparationHandler().setCHProfiles(new CHProfile("car"), new CHProfile("train"),new CHProfile("barge"));
